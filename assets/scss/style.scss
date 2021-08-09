@@ -977,6 +977,89 @@ time, mark, audio, video {
  }
 
 
+
+// =========>>>>>>>>>Switch---Toggle--Button--------<<<<<<<<<<<<<<//
+
+.toggle-btn{
+    width: 55px;
+    height: 30px; 
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyklEQVQ4T42TaxHCQAyENw5wAhLACVUAUkABOCkSwEkdhNmbpHNckzv689L98toIAKjqGcAFwElEFr5ln6ruAMwA7iLyFBM/TPDuQSrxwf6fCKBoX2UMIYGYkg8BLOnVg2RiAEexGaQQq4w9e9klcxGLLAUwgDAcihlYAR1IvZA1sz/+AAaQjXhTQQVoe2Yo3E7UQiT2ijeQdojRtClOfVKvMVyVpU594kZK9zzySWTlcNqZY9tjCsUds00+A57z1e35xzlzJjee8xf0HYp+cOZQUQAAAABJRU5ErkJggg==') no-repeat 31px  center #DA291C;
+    cursor: pointer; 
+    transition: background-color .40s ease-in-out;
+    cursor:pointer;
+    &.active{
+      background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmUlEQVQ4T6WT0RWDMAhFeZs4ipu0mawZpaO4yevBc6hUIWLNd+4NeQDk5sE/PMkZwFvZywKSTxF5iUgH0C4JHGyF97IggFVSqyCFga0CvQSg70Mdwd8QSSr4sGBMcgavAgdvwQCtApvA2uKr1x7Pu++06ItrF5LXPB/CP4M0kKTwYRIDyRAOR9lJTuF0F0hOAJbKopVHOZN9ACS0UgowIx8ZAAAAAElFTkSuQmCC') no-repeat 8px  center #080;//#28a745;
+      .round-btn{
+        left: 29px;
+      }
+    }
+    .round-btn{
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 4px;
+    top: 61%;
+    margin-top: -15px; 
+    transition: all .30s ease-in-out;
+    }
+    .cb-value{
+      position: absolute;
+      left:0;
+      right:0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 9;
+      cursor:pointer;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+  }
+  
+  
+   
+//   .made-with-love{
+//     position: fixed;
+//     left: 0;
+//     width: 100%;
+//     bottom: 10px;
+//     text-align: center;
+//     font-size: 10px;
+//     z-index: 9999;
+//     font-family: arial;
+//     color: #fff;
+//     i{
+//       font-style: normal;
+//       color: #F50057;
+//       font-size: 14px;
+//       position: relative;
+//       top: 2px;
+//     }
+//     a{
+//       color: #fff;
+//       text-decoration: none;
+//       &:hover{
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+
+
+// =========>>>>>>>>>Switch---Toggle--Button--------<<<<<<<<<<<<<<//
+
+
+
+
+
+
+ 
+
+
  
  @media only screen and (min-width: 1200px){
     .modal-xl {
@@ -984,3 +1067,4 @@ time, mark, audio, video {
     }
  }
  
+
