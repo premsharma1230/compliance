@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Compliance</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="container">
+                <nav>
+                    <!-- <h2>Welcome Home page</h2> -->
+                    <!-- <a href="login.html">Login page</a> -->
+                    <div class="profile-wrapper">
+                        <div class="SubProfile">
+                            <span class="profile1"><i class="far fa-user-circle"></i></span>
+                            <h3>Super.Admin</h3>
+                            <span class="arrow-down"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </nav>
+                <div class="credential-Wrapper">
+                    <ul class="unorder">
+                        <li>
+                            <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- menu-bar -->
+            <div class="main-bar">
+                <div class="a"></div>
+                <div class="b"></div>
+                <div class="c"></div>
+                <!-- menu-bar -->
+            </div>
+        </header>
+
+
+        <!-- Sidebar-section -->
+        <section class="Sidebar_Wrapper">
+            <div class="Side-child_Wrp">
+                <ul class="Sidbar-Nav-Wrapper">
+                    <li class="Side_item Logo">
+                        <a href="companymaster.html">
+                            company master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliance.html">
+                            compliance master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliancetypemaster.html">
+                            compliance type master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="activitymaster.html">
+                            activity master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="subactivity.html">
+                            SubActivity master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="sectionmaster.html">
+                            Section master
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- sidber----end--here -->
+
+        <!--  -->
+        <div class="Company-masterWrapper Attachment_MasterWrapper" id="Attachment_MasterWrapper">
+            <div class="Company-content">
+                <div class="heading-wrp">
+                    <div class="heading-txt">
+                        <h2>Activity Master</h2>
+                    </div>
+                    <button class="AddForm" type="button" class="" data-bs-toggle="modal"
+                        data-bs-target="#ComTypMaster" data-bs-whatever="@mdo">
+                        <!-- <h2> Add </h2> -->
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="Table_wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <!-- <th>ID</th> -->
+                                <th>ActivityName</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="Action-wrp">
+                                        <span class="edit" type="button" class="" data-bs-toggle="modal"
+                                            data-bs-target="#Editmodal" data-bs-whatever="@mdo">
+                                             <i class="far fa-edit" title="edit"  
+                                            data-bs-toggle="modal" data-bs-target=".EditMaster"
+                                            data-bs-whatever="@mdo"></i> 
+                                        </span>
+                                        <span class="del danger" type="button" class="" data-bs-toggle="modal"
+                                            data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
+                                            <i class="fas fa-trash-alt" title="delete"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <!-- <td>1</td> -->
+                                <td>NN274305</td>
+                                <td class="active-wrp">
+                                    <span class="active-status">
+                                        <b>active</b>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="Action-wrp">
+                                        <span class="edit" type="button" class="" data-bs-toggle="modal"
+                                            data-bs-target="#Editmodal" data-bs-whatever="@mdo">
+                                             <i class="far fa-edit" title="edit"  
+                                            data-bs-toggle="modal" data-bs-target=".EditMaster"
+                                            data-bs-whatever="@mdo"></i> 
+                                        </span>
+                                        <span class="del danger" type="button" class="" data-bs-toggle="modal"
+                                            data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
+                                            <i class="fas fa-trash-alt" title="delete"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <!-- <td>2</td> -->
+                                <td>RPT274305</td>
+                                <td class="deactive-wrp">
+                                    <span class="deactive-status">
+                                        <b>InActive</b>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="Action-wrp">
+                                        <span class="edit" type="button" class="" data-bs-toggle="modal"
+                                            data-bs-target="#Editmodal" data-bs-whatever="@mdo">
+                                            <i class="far fa-edit" title="edit"  
+                                            data-bs-toggle="modal" data-bs-target=".EditMaster"
+                                            data-bs-whatever="@mdo"></i> 
+                                        </span>
+                                        <span class="del danger" type="button" class="" data-bs-toggle="modal"
+                                            data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
+                                            <i class="fas fa-trash-alt" title="delete"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <!-- <td>3</td> -->
+                                <td>LT274305</td>
+                                <td class="deactive-wrp">
+                                    <span class="deactive-status">
+                                        <b>InActive</b>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+ <!-- Add--Modal -->
+    <div class="modal fade Company_Modal_Wrapper" id="ComTypMaster" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="Modal-title-Wrp">
+                        <h4>Add</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-content">
+                        <form id="registerForm">
+                            <div class="Tab_Wrapper tab1" id="Basic-Item1">
+                                <div class="child-form">
+                                    <div class="modal-item1 item-cmn">
+                                        <label for="recipient-name" class="col-form-label">Activity Name</label>
+                                        <input type="text" class="form-control" oninput="this.className = form-control "
+                                            id="recipient-name" placeholder="Activity Name">
+                                    </div>
+                                    <div class="modal-item2 item-cmn">
+                                        <label for="message-text" class="col-form-label">Status</label>
+                                        <select>
+                                            <option value="1">Active</option>
+                                            <option value="0">InActive</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="modal-footer"> 
+                                <button type="button" class="btn btn-success" title="save">Save</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" title="close">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup--of ---company- -->
+ 
+<!-- Edit---Modal -->
+<div class="modal fade Company_Modal_Wrapper EditMaster" id="EditComTypMaster" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="Modal-title-Wrp">
+                <h4>Edit</h4>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-content">
+                <form id="registerForm">
+                    <div class="Tab_Wrapper tab1" id="Basic-Item1">
+                        <div class="child-form"> 
+                            <div class="modal-item1 item-cmn">
+                                <label for="recipient-name" class="col-form-label">Activity Name</label>
+                                <input type="text" class="form-control"
+                                    oninput="this.className = form-control " id="recipient-name"
+                                    placeholder="Activity Name">
+                            </div>
+                            <div class="modal-item2 item-cmn">
+                                <label for="message-text" class="col-form-label">Status</label>
+                                <select>
+                                    <option value="1">Active</option>
+                                    <option value="0">InActive</option>
+                                </select>
+                            </div> 
+                        </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" title="save">Save</button>
+                        <button type="button" class="btn btn-danger" title="close" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit--modal ---end--here -->
+
+
+  <!-- Delete--modal -->
+  <div class="modal fade Dialog-Wrapper" id="Delete-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content MuiDialog-paperWidthSm">
+          <div class="Dailog-img">
+              <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <div class="Dailog-content">
+              <h2>Are You Sure ?</h2>
+              <p>you want to delete?</p>
+          </div>
+          <div class="modal-footer dailog-grp-btn">
+              <button type="button" class="btn btn-secondary cancel-btn"
+                  data-bs-dismiss="modal" title="cancel">CANCEL</button>
+              <button type="button" class="btn btn-danger ok-btn" data-bs-dismiss="modal" title="ok">OK</button>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- --Delete--Modal -->
+
+
+</main>
+
+
+    <!-- script---section -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js//jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

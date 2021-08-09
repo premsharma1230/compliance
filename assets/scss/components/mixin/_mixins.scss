@@ -1,0 +1,130 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}  
+
+@mixin  sidebar {
+   background: #ffffff;
+   position: fixed;
+   left: 0;
+   height: 100vh;
+   box-shadow: 3px 0 3px 1px #eeeeee78;         
+}
+
+@mixin textkit {
+    word-spacing: .5px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+
+@mixin  scrollbar {
+   &::-webkit-scrollbar{
+       width: 8px;
+   }
+   &::-webkit-scrollbar-thumb{
+       background:#444;
+       transition: $transition;
+       border-radius: 10px;
+       &:hover{ 
+           background:  $secondary;
+           transition: $transition;
+       }
+   }
+   &::-webkit-scrollbar-track{ 
+       box-shadow: inset 0 1px 4px 2px #2b2c2d5c;
+   }
+}
+
+ 
+
+h1,h2,h3,h4,h5,h6{  
+font-family: 'Poppins','SansSerif';
+margin: 0;
+margin-bottom: 0rem!important;
+padding: 0;
+}
+ul{
+   margin-bottom:0!important;
+}
+p,span,a,label,li,option{
+   font-family: 'Poppins','SansSerif'; 
+   text-decoration: none!important;
+}
+a{
+   text-decoration: none;
+}
+li{list-style-type: none;}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+.modal-footer,.save-btn{
+    .btn-danger{
+        background: #DA291C !important;
+        transition: all .3s ease-in-out;
+        &:hover{
+            opacity: .88;
+            transition: all .3s ease-in-out;
+        }
+    }
+    .btn-success{
+        background: #292f2d!important;
+        border-color:#292f2da3!important;
+        transition: all .3s ease-in-out;
+        &:hover{
+            opacity: .88;
+            transition: all .3s ease-in-out;
+        }
+        &:focus,&:active,&:visited,&:focus-within{
+            box-shadow: 0 0 0 0.25rem #292f2d33!important;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+.modal-content{
+   background-color: #f5f7fa;
+}
+ 
+
+$banner:#008cff0d;
+$heading:#61dafb;
+$white:#ffffff;//#F1F2F1;; 
+$parent-bg:#f5f7fa;
+$banner-bg:#282c34;
+$header-bg:#3f4346;//#1d1d1b; 
+$second:#008cff;
+$secondary:#101820;//#1d1d1b;
+$primary:#F3F8FA;
+$reset:#DA291C;
+$table-odd:#eeeded38 ;//#3f43460d;
+$table-hvr:#3f434614 ;//#3f434633;
+$black:#000;
+$box-shadow:0 10px 40px 0 #3e396b12, 0 2px 9px 0 #3e396b0f;
+$table-header:linear-gradient(to right, #64646e 0, #292f2d 100%);
+$transition:all .3s ease-in-out;
+$mid:center;
+$rgt:right;
+$cap:capitalize;
+$point:pointer;
+$between:space-between;
+$flexend:flex-end;
+$none:none;
+$hide:hidden;
+$auto:auto;
+$bold:bold;
+$solid:solid;
+$grid:grid;
+$maxcontent:max-content;
+$rel:relative;
+$abs:absolute; 
+$regular:"Poppins", sans-serif;//'Gotham Pro regular';
+
+
+
+

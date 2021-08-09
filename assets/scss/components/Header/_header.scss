@@ -1,0 +1,118 @@
+header{
+    padding: .7rem 0;
+    background:$secondary;
+    nav{
+        .profile-wrapper{
+           @include flex;
+           justify-content: flex-end;
+        //    margin-right: 6rem; 
+           .SubProfile{
+               @include flex; 
+               color: $white;
+               cursor: pointer;
+               transition: $transition;
+               &:hover{
+               transition: $transition;
+               opacity: .88;
+               }
+               span{
+                  i.far.fa-user-circle{
+                    font-size: 1.50em;
+                  }
+                  i.fas.fa-chevron-down{
+                      font-size: 1.010em;
+                  }
+               }
+               h3{
+                   font-size: 1.015em;
+                   text-transform: $cap;
+                   padding:0 .5rem;
+               }
+           }
+        }
+    }
+    .credential-Wrapper{
+       position: absolute;
+       top: 51px;
+       right: 93px;
+       background: $header-bg;
+       width: 160px;
+       border-radius: 5px; 
+       display: $none;
+        .unorder{
+            li{
+                list-style-type: $none;
+                padding: .5rem 2px;
+                width: 100%;
+                text-align: $mid;
+                @include flex; 
+                &:hover{
+                   transition: $transition;
+                   opacity: .77;
+                   i.fas.fa-power-off{
+                       color: #999;
+                       transition: $transition;
+                   }  
+                  }
+                .Logout_icon{
+                    i.fas.fa-power-off{
+                        font-size: 15px;
+                        margin-right: .8rem;
+                        transition: $transition; 
+                        color: $white;
+                    }
+                }
+                a{
+                    font-size: 1em;
+                    @include textkit; 
+                    color: #fff;  
+                    transition: $transition;
+                }
+            }
+        }
+    }
+    .main-bar {
+        left: 18%;
+        top: 8px;
+        position: absolute;
+        cursor: pointer;
+        transition: $transition;
+        &:hover{
+           transition: $transition;
+           div{
+               background: rgba(255, 255, 255, 0.733);
+               transition: $transition;
+           }
+        }
+        div{
+            width: 35px;
+            height: 4px;
+            margin: 6px 0; 
+            transition: $transition;
+            background: $white;
+        }
+      }  
+      .Active-Menu {
+          top: 15px;
+          transition: $transition;
+        .a { 
+            transform: rotateZ(
+                43deg
+                ); 
+                
+         transition: $transition;
+        }
+       .b {
+          opacity: 0;
+        }
+        .c{
+            transform: rotateZ(-46deg);
+            top: 0px;
+            position: absolute;  
+            transition: $transition;
+            margin: 6px 0 0 0px;   
+        }
+
+      }
+    
+}

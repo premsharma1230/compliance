@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href=" assets/images/favicon.png">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/extensions/unslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/meteocons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/charts/morris.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/components.min.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/core/colors/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pages/timeline.min.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- END: Custom CSS-->
+    <link href=" assets/css/custom_qport.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center">
+
+            <!-- Login form -->
+            <div class="limiter">
+                <div class="container-login100">
+                    <div class="wrap-login100">
+                        <div class="login100-pic" data-tilt>
+                            <img src="assets/images/card-bg.png" alt="IMG">
+                        </div>  
+                        <form class="login100-form mt-2" id="loginform" action="index.html">
+                            <span class="login100-form-logo">
+                                <img src="assets/images/qfs-logo.gif" alt="IMG">
+
+                            </span>
+                            <span class="login100-form-title">
+                                Login to Account
+                            </span>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="feather icon-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Password" aria-label="Password"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                                <span class="text-white mr-1">Login Type</span>
+                                <fieldset>
+                                    <div class="mb-1">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="Customer" value="Customer">
+                                            <label class="form-check-label text-white" for="Customer">Customer</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="Employee" id="Employee"
+                                                value="Employee">
+                                            <label class="form-check-label text-white" for="Employee">Employee</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="custom-control custom-checkbox d-flex align-items-center mb-1">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label text-white" for="customCheck1">Remember me</label>
+                                <a href="forgot-password.html" id="to-recover" class="text-white ml-auto"><i
+                                        class="fa fa-lock mr-1"></i> Forgot Password?</a>
+                            </div>
+                            <div class="form-group text-center">
+                                <div class="col-xs-12 ">
+                                    <a href="index.html" class="btn btn-block btn-md btn-info login-btn"
+                                        type="submit">Login</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+
+
+                                    <div class="col-md-12 col-xs-6 mt-1 no-padding">
+                                        <a href="forgot-user.html" id="forget_id" class="text-white ml-auto"><i
+                                                class="feather icon-user"></i> Forgot User Id?</a>
+                                        <a href="javascript:void(0)" id="unlock_account" class="text-white ml-auto "> <i
+                                                class="feather icon-unlock ml-1"></i> Unlock Account?</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </row>
+                            <div class="row no-padding">
+
+                                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 text-center">
+                                    <div class="row pb-2">
+                                        <div class="line"></div>
+                                        <small class="or text-center">Connect With us</small>
+                                        <div class="line"></div>
+                                    </div>
+
+                                    <div class="social">
+                                        <a href="javascript:void(0)"
+                                            class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"
+                                            data-toggle="tooltip" title="" data-original-title="Facebook"> <i
+                                                aria-hidden="true" class="fa  fa-facebook"></i> </a>
+                                        <a href="javascript:void(0)"
+                                            class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"
+                                            data-toggle="tooltip" title="" data-original-title="Twitter"> <i
+                                                aria-hidden="true" class="fa  fa-twitter"></i> </a>
+                                        <a href="javascript:void(0)"
+                                            class="btn btn-social-icon mr-1 mb-1 btn-outline-linkedin"
+                                            data-toggle="tooltip" title="" data-original-title="linkedin"> <i
+                                                aria-hidden="true" class="fa  fa-linkedin"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New End-->
+
+
+
+
+
+
+            <!--Login-form-cloased -->
+
+
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="assets/vendors/js/charts/raphael-min.js"></script>
+    <script src="assets/vendors/js/charts/morris.min.js"></script>
+    <script src="assets/vendors/js/extensions/unslider-min.js"></script>
+    <script src="assets/vendors/js/timeline/horizontal-timeline.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="assets/js/core/app-menu.min.js"></script>
+    <script src="assets/js/core/app.min.js"></script>
+
+    <!-- END: Theme JS-->
+
+
+</body>
+
+</html>

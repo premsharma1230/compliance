@@ -1,0 +1,30 @@
+section.Sidebar_Wrapper {
+    background: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    box-shadow: 0 10px 40px 0 #3e396b12, 0 2px 9px 0 #3e396b0f;
+    // display: none;
+    .Side-child_Wrp{
+       @include flex;
+       width: 100%;
+       .Sidbar-Nav-Wrapper{
+           margin-top: 2rem;
+           width: 100%; 
+           padding: 0;
+           li{
+            //    padding: .5rem 0 ;
+            padding: .5rem 0 .5rem 1rem;
+            //    background: #eee;
+               background: #f5f7fa;//#eeeeee3b;
+               text-align: left;
+               margin: .3rem 0;
+               a{
+                   text-decoration: $none;
+                   color: $secondary;
+               }
+           }
+       }
+    }
+}
