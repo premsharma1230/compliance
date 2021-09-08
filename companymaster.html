@@ -16,6 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                     <ul class="unorder">
                         <li>
                             <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
-                            <a href="#">Logout</a>
+                            <a href="login.html">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -62,16 +63,6 @@
                         </a>
                     </li>
                     <li class="Side_item">
-                        <a href="compliance.html">
-                            Compliance master
-                        </a>
-                    </li>
-                    <li class="Side_item">
-                        <a href="compliancetypemaster.html">
-                            compliance type master
-                        </a>
-                    </li>
-                    <li class="Side_item">
                         <a href="activitymaster.html">
                             activity master
                         </a>
@@ -86,6 +77,21 @@
                             Section master
                         </a>
                     </li>
+                    <li class="Side_item">
+                        <a href="compliancetypemaster.html">
+                            compliance type master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliance.html">
+                            compliance master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="myactivity.html">
+                            My Activity
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -98,12 +104,25 @@
                     <div class="heading-txt">
                         <h2>Company master</h2>
                     </div>
-                    <button class="AddForm" type="button" class="" data-bs-toggle="modal" data-bs-target="#Addmodal"
-                        data-bs-whatever="@mdo">
-                        <!-- data-toggle="tooltip" data-placement="left" title="Tooltip on left" -->
-                        <!-- <h2> Add </h2> -->
-                        <i class="fas fa-plus"></i>
-                    </button>
+                    <div class="group-search">
+                        <form action="#">
+                            <input type="text" name="globle-search" id="myInput" placeholder="Search...">
+                        </form>
+                        <div class="export-wrp">
+                            <button class="export-btn" title="export to excel">
+                                <!-- <i class="fas fa-file-excel"></i> -->
+                                export excel
+                            </button>
+                        </div>
+                        <div class="add-btn">
+                            <button class="AddForm" type="button" class="" data-bs-toggle="modal"
+                                data-bs-target="#Addmodal" data-bs-whatever="@mdo">
+                                <!-- data-toggle="tooltip" data-placement="left" title="Tooltip on left" -->
+                                <!-- <h2> Add </h2> -->
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="Table_wrapper">
                     <table>
@@ -124,12 +143,12 @@
                                 <th>Comments</th> -->
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="myTable">
                             <tr>
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo">
+                                            data-bs-target=".EditMaster1" data-bs-whatever="@mdo">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -148,10 +167,11 @@
                                     <!-- <span class="active-status">
                                         <b>active</b>
                                     </span> -->
+                                    <!-- id="success" -->
                                     <div class="toggle-btn active">
                                         <input type="checkbox" checked class="cb-value" />
                                         <span class="round-btn"></span>
-                                    </div> 
+                                    </div>
                                 </td>
                                 <!--  <td>Lorem ipsum dolor sit.</td>
                                 <td>Lorem, ipsum.</td>
@@ -165,7 +185,7 @@
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster">
+                                            data-bs-target=".EditMaster1">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -188,11 +208,11 @@
                                         <input type="checkbox" class="custom-control-input" id="customSwitch1">
                                         <label class="custom-control-label" for="customSwitch1"></label>
                                       </div> -->
-                                      <div class="toggle-btn">
+                                    <div class="toggle-btn">
                                         <input type="checkbox" class="cb-value" />
                                         <span class="round-btn"></span>
                                     </div>
-                                    
+
                                 </td>
                                 <!-- <td>Lorem ipsum dolor sit.</td>
                                 <td>Lorem, ipsum.</td>
@@ -206,7 +226,7 @@
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo">
+                                            data-bs-target=".EditMaster1" data-bs-whatever="@mdo">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -225,7 +245,7 @@
                                     <div class="toggle-btn active">
                                         <input type="checkbox" checked class="cb-value" />
                                         <span class="round-btn"></span>
-                                    </div> 
+                                    </div>
                                     <!-- <span class="active-status">
                                         <b>active</b>
                                     </span> -->
@@ -242,7 +262,7 @@
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo">
+                                            data-bs-target=".EditMaster1" data-bs-whatever="@mdo">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -348,9 +368,18 @@
                                         </div>
                                         <div class="modal-item10 item-cmn">
                                             <label for="message-text" class="col-form-label">FEIN</label>
-                                            <input type="text" class="form-control"
-                                                oninput="this.className = form-control " id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="FEIN">
+                                        </div>
+                                        <div class="modal-item11 item-cmn">
+                                            <label for="message-text" class="col-form-label">Other1</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Other1">
+                                        </div>
+                                        <div class="modal-item12 item-cmn">
+                                            <label for="message-text" class="col-form-label">Other2</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Other2">
                                         </div>
                                         <div class="modal-item2 item-cmn Register-Wrapper">
                                             <label for="message-text" class="col-form-label">Registered Office</label>
@@ -457,8 +486,9 @@
                                         </div>
                                         <div class="modal-item11 item-cmn Comment-wrp">
                                             <label for="message-text" class="col-form-label">Comments</label>
-                                            <textarea class="form-control" oninput="this.className = form-control "
-                                                id="message-text"></textarea>
+                                            <!-- <div id="txtEditor">c-form-control c-with-editor id="editor" -->
+                                            <textarea class="form-control "  name="textarea"></textarea>
+                                            <!-- </div> -->
                                         </div>
                                         <div class="modal-item8 item-cmn save-btn">
                                             <label for="recipient-name" class="col-form-label"></label>
@@ -523,6 +553,11 @@
                                                 <option value="0">Mexico</option>
                                             </select>
                                         </div>
+                                        <div class="modal-item12 item-cmn">
+                                            <label for="message-text" class="col-form-label">Other</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Other">
+                                        </div>
                                         <div class="modal-item8 item-cmn save-btn">
                                             <label for="recipient-name" class="col-form-label"></label>
                                             <!-- <button type="button" class="btn btn-success" id="save"
@@ -553,6 +588,7 @@
                                                             <th>State</th>
                                                             <th>Country</th>
                                                             <th>Zipcode</th>
+                                                            <th>Status</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -575,6 +611,15 @@
                                                             <td>Lorem, ipsum.</td>
                                                             <td>India</td>
                                                             <td>122001</td>
+                                                            <td class="active-wrp">
+                                                                <!-- <span class="active-status">
+                                                                    <b>active</b>
+                                                                </span> -->
+                                                                <div class="toggle-btn active">
+                                                                    <input type="checkbox" checked class="cb-value" />
+                                                                    <span class="round-btn"></span>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -595,6 +640,15 @@
                                                             <td>Lorem, ipsum.</td>
                                                             <td>India</td>
                                                             <td>122001</td>
+                                                            <td class="deactive-wrp">
+                                                                <!-- <span class="active-status">
+                                                                    <b>active</b>
+                                                                </span> -->
+                                                                <div class="toggle-btn">
+                                                                    <input type="checkbox" checked class="cb-value" />
+                                                                    <span class="round-btn"></span>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -615,6 +669,15 @@
                                                             <td>Lorem, ipsum.</td>
                                                             <td>India</td>
                                                             <td>122001</td>
+                                                            <td class="active-wrp">
+                                                                <!-- <span class="active-status">
+                                                                    <b>active</b>
+                                                                </span> -->
+                                                                <div class="toggle-btn active">
+                                                                    <input type="checkbox" checked class="cb-value" />
+                                                                    <span class="round-btn"></span>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -736,7 +799,7 @@
 
 
         <!-- Edit---Modal -->
-        <div class="modal fade Company_Modal_Wrapper EditMaster" id="EditComTypMaster" tabindex="-1"
+        <div class="modal fade Company_Modal_Wrapper EditMaster1" id="EditComTypMaster" tabindex="-1"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
@@ -746,10 +809,24 @@
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-header" style="border-color: transparent;">
+                        <div class="Modal-title-Wrp">
+                            <h5 class="modal-title active-Steps" id="BasicInfo"
+                                onclick="openBasicItemEdit('Basic-ItemEdit1')">
+                                Basic info</h5>
+                            <h5 class="modal-title" id="OtherLocation" onclick="openBasicItemEdit('Basic-ItemEdit2')">
+                                Other
+                                Location</h5>
+                            <h5 class="modal-title" id="Attachment" onclick="openBasicItemEdit('Basic-ItemEdit3')">
+                                Attachment
+                            </h5>
+                        </div>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
                     <div class="modal-body">
                         <div class="modal-body-content" id="Company_Master01">
-                            <form class="Edit_registerForm" id="registerForm">
-                                <div class="Company_Table_wrapper tab1">
+                            <form id="registerForm">
+                                <div class="Edit-Tab_Wrapper tab1" id="Basic-ItemEdit1">
                                     <div class="child-form">
                                         <div class="modal-item1 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Company Name</label>
@@ -757,69 +834,466 @@
                                                 oninput="this.className = form-control " id="recipient-name"
                                                 placeholder="Company Name">
                                         </div>
-                                        <div class="modal-item2 item-cmn">
-                                            <label for="message-text" class="col-form-label">Registered Office</label>
-                                            <input type="text" class="form-control"
-                                                oninput="this.className = form-control " id="recipient-name"
-                                                placeholder="Registered Office">
-                                        </div>
-                                        <div class="modal-item3 item-cmn">
-                                            <label for="message-text" class="col-form-label">Corporate Office</label>
-                                            <input type="text" class="form-control"
-                                                oninput="this.className = form-control " id="recipient-name"
-                                                placeholder="Corporate Office">
-                                        </div>
                                         <div class="modal-item4 item-cmn">
                                             <label for="message-text" class="col-form-label">Date Of Formation</label>
                                             <input type="datetime-local" class="form-control"
                                                 oninput="this.className = form-control " id="recipient-name"
                                                 placeholder="">
                                         </div>
-                                        <div class="modal-item6 item-cmn">
-                                            <label for="message-text" class="col-form-label">GSTN</label>
-                                            <input type="text" class="form-control"
-                                                oninput="this.className = form-control " id="recipient-name"
-                                                placeholder="GSTN">
-                                        </div>
                                         <div class="modal-item5 item-cmn">
                                             <label for="message-text" class="col-form-label">Status</label>
-                                            <select>
+                                            <select oninput="this.className = form-control ">
                                                 <option value="1">Active</option>
                                                 <option value="0">InActive</option>
                                             </select>
                                         </div>
-                                        <!-- <div class="modal-item7 item-cmn">
-                        <label for="message-text" class="col-form-label">PAN</label>
-                        <input type="text" class="form-control" oninput="this.className = form-control "
-                            id="recipient-name" placeholder="PAN">
-                    </div>
-                    <div class="modal-item8 item-cmn">
-                        <label for="message-text" class="col-form-label">TAN</label>
-                        <input type="text" class="form-control" oninput="this.className = form-control "
-                            id="recipient-name" placeholder="TAN">
-                    </div>
-                    <div class="modal-item9 item-cmn">
-                        <label for="message-text" class="col-form-label">Incorporation Number</label>
-                        <input type="text" class="form-control" oninput="this.className = form-control "
-                            id="recipient-name" placeholder="Incorporation Number">
-                    </div>
-                    <div class="modal-item10 item-cmn">
-                        <label for="message-text" class="col-form-label">FEIN</label>
-                        <input type="text" class="form-control" oninput="this.className = form-control "
-                            id="recipient-name" placeholder="FEIN">
-                    </div>
-                    <div class="modal-item11 item-cmn Comment-wrp">
-                        <label for="message-text" class="col-form-label">Comments</label>
-                        <textarea class="form-control" oninput="this.className = form-control "
-                            id="message-text"></textarea>
-                    </div> -->
+                                        <!-- <div class="modal-item6 item-cmn">
+                                            <label for="message-text" class="col-form-label">GSTN</label>
+                                            <input type="text" class="form-control"  oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="GSTN">
+                                        </div> -->
+                                        <div class="modal-item7 item-cmn">
+                                            <label for="message-text" class="col-form-label">PAN</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="PAN">
+                                        </div>
+                                        <div class="modal-item8 item-cmn">
+                                            <label for="message-text" class="col-form-label">TAN</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="TAN">
+                                        </div>
+                                        <div class="modal-item9 item-cmn">
+                                            <label for="message-text" class="col-form-label">Incorporation
+                                                Number</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Incorporation Number">
+                                        </div>
+                                        <div class="modal-item10 item-cmn">
+                                            <label for="message-text" class="col-form-label">FEIN</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="FEIN">
+                                        </div>
+                                        <div class="modal-item11 item-cmn">
+                                            <label for="message-text" class="col-form-label">Other1</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Other1">
+                                        </div>
+                                        <div class="modal-item12 item-cmn">
+                                            <label for="message-text" class="col-form-label">Other2</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Other2">
+                                        </div>
+                                        <div class="modal-item2 item-cmn Register-Wrapper">
+                                            <label for="message-text" class="col-form-label">Registered Office</label>
+                                            <!-- <input type="text" class="form-control"  oninput="this.className = form-control " id="recipient-name" placeholder="Registered Office"> -->
+                                            <div class="Register-child_wrp">
+                                                <div class="modal-item01 item-cmn">
+                                                    <label for="message-text" class="col-form-label">Address1</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item02 item-cmn">
+                                                    <label for="message-text" class="col-form-label">Address2</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item03 item-cmn">
+                                                    <label for="message-text" class="col-form-label">GSTN</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item04 item-cmn">
+                                                    <label for="message-text" class="col-form-label">City</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item05 item-cmn">
+                                                    <label for="message-text" class="col-form-label">State</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item06 item-cmn">
+                                                    <label for="message-text" class="col-form-label">ZipCode</label>
+                                                    <input type="number" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item7 item-cmn">
+                                                    <label for="message-text" class="col-form-label">Country</label>
+                                                    <select oninput="this.className = form-control ">
+                                                        <option value="1">India</option>
+                                                        <option value="0">Indonesia</option>
+                                                        <option value="0">Italy</option>
+                                                        <option value="1">Nepal</option>
+                                                        <option value="0">Malaysia</option>
+                                                        <option value="0">Maldives</option>
+                                                        <option value="0">Mexico</option>
+                                                        <option value="0">Mexico</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-item3 item-cmn Register-Wrapper">
+                                            <label for="message-text" class="col-form-label">Corporate Office</label>
+                                            <!-- <input type="text" class="form-control"  oninput="this.className = form-control " id="recipient-name" placeholder="Corporate Office"> -->
+                                            <div class="checkbox-wrp">
+                                                <input type="checkbox" name="checkbox" id="checkbox1">
+                                                <span>Same as Registered Office</span>
+                                            </div>
+                                            <div class="Register-child_wrp">
+                                                <div class="modal-item01 item-cmn">
+                                                    <label for="message-text" class="col-form-label">Address1</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item02 item-cmn">
+                                                    <label for="message-text" class="col-form-label">Address2</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item03 item-cmn">
+                                                    <label for="message-text" class="col-form-label">GSTN</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item04 item-cmn">
+                                                    <label for="message-text" class="col-form-label">City</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item05 item-cmn">
+                                                    <label for="message-text" class="col-form-label">State</label>
+                                                    <input type="text" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item06 item-cmn">
+                                                    <label for="message-text" class="col-form-label">ZipCode</label>
+                                                    <input type="number" class="form-control"
+                                                        oninput="this.className = form-control " id="recipient-name">
+                                                </div>
+                                                <div class="modal-item7 item-cmn">
+                                                    <label for="message-text" class="col-form-label">Country</label>
+                                                    <select oninput="this.className = form-control ">
+                                                        <option value="1">India</option>
+                                                        <option value="0">Indonesia</option>
+                                                        <option value="0">Italy</option>
+                                                        <option value="1">Nepal</option>
+                                                        <option value="0">Malaysia</option>
+                                                        <option value="0">Maldives</option>
+                                                        <option value="0">Mexico</option>
+                                                        <option value="0">Mexico</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-item11 item-cmn Comment-wrp">
+                                            <label for="message-text" class="col-form-label">Comments</label>
+                                            <!-- <div id="txtEditor">c-form-control c-with-editor id="editor" -->
+                                            <textarea class="form-control" name="textarea"></textarea>
+                                            <!-- </div> -->
+                                        </div>
+                                        <div class="modal-item8 item-cmn save-btn">
+                                            <label for="recipient-name" class="col-form-label"></label>
+                                            <!-- <button type="button" class="btn btn-success" id="save"
+                                            >Save</button> -->
+                                            <button type="button" class="btn btn-success" title="save">Save</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                                title="close">Close</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-success" title="save">Save</button>
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
-                                        title="Close">Close</button>
+                                <div class="Edit-Tab_Wrapper  tab2" id="Basic-ItemEdit2" style="display: none;">
+                                    <div class="child-form">
+                                        <div class="modal-item1 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">Location Name</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Location Name">
+                                        </div>
+                                        <div class="modal-item2 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">Address1</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Address1">
+                                        </div>
+                                        <div class="modal-item3 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">Address2</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Address2">
+                                        </div>
+                                        <div class="modal-item03 item-cmn">
+                                            <label for="message-text" class="col-form-label">GSTN</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name">
+                                        </div>
+                                        <div class="modal-item04 item-cmn">
+                                            <label for="message-text" class="col-form-label">City</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name">
+                                        </div>
+                                        <div class="modal-item05 item-cmn">
+                                            <label for="message-text" class="col-form-label">State</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name">
+                                        </div>
+                                        <div class="modal-item06 item-cmn">
+                                            <label for="message-text" class="col-form-label">ZipCode</label>
+                                            <input type="number" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name">
+                                        </div>
+                                        <div class="modal-item7 item-cmn">
+                                            <label for="message-text" class="col-form-label">Country</label>
+                                            <select oninput="this.className = form-control ">
+                                                <option value="1">India</option>
+                                                <option value="0">Indonesia</option>
+                                                <option value="0">Italy</option>
+                                                <option value="1">Nepal</option>
+                                                <option value="0">Malaysia</option>
+                                                <option value="0">Maldives</option>
+                                                <option value="0">Mexico</option>
+                                                <option value="0">Mexico</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-item12 item-cmn">
+                                            <label for="message-text" class="col-form-label">Other</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Other">
+                                        </div>
+                                        <div class="modal-item8 item-cmn save-btn">
+                                            <label for="recipient-name" class="col-form-label"></label>
+                                            <!-- <button type="button" class="btn btn-success" id="save"
+                                            >Save</button> -->
+                                            <button type="button" class="btn btn-success" title="Add New">Add
+                                                New</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                                title="Cancel">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="Company-masterWrapper Attachment_MasterWrapper">
+                                        <div class="Company-content">
+                                            <!-- <div class="heading-wrp">
+                                                <h2>Company Location master</h2>
+                                            </div> -->
+                                            <div class="Company_Table_wrapper">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <!-- <th>LocationID</th> -->
+                                                            <!-- <th>CompanyFID</th> -->
+                                                            <th>Action</th>
+                                                            <th>LocationName</th>
+                                                            <th>Address1</th>
+                                                            <th>Address2</th>
+                                                            <th>City</th>
+                                                            <th>State</th>
+                                                            <th>Country</th>
+                                                            <th>Zipcode</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="Action-wrp">
+                                                                    <span class="edit" type="button" class="">
+                                                                        <i class="far fa-edit" title="edit"></i></i>
+                                                                    </span>
+                                                                    <span class="del danger">
+                                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <!-- <td>GG274305</td>  -->
+                                                            <td>DLF phase3</td>
+                                                            <td>DLF Lorem, ipsum.</td>
+                                                            <td>DLF Lorem, ipsum.</td>
+                                                            <td>Gurugram</td>
+                                                            <td>Lorem, ipsum.</td>
+                                                            <td>India</td>
+                                                            <td>122001</td>
+                                                            <td class="active-wrp">
+                                                                <!-- <span class="active-status">
+                                                                    <b>active</b>
+                                                                </span> -->
+                                                                <div class="toggle-btn active">
+                                                                    <input type="checkbox" checked class="cb-value" />
+                                                                    <span class="round-btn"></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="Action-wrp">
+                                                                    <span class="edit" type="button" class="">
+                                                                        <i class="far fa-edit" title="edit"></i></i>
+                                                                    </span>
+                                                                    <span class="del danger">
+                                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <!-- <td>RT274305</td>  -->
+                                                            <td>DLF phase3</td>
+                                                            <td>DLF Lorem, ipsum.</td>
+                                                            <td>DLF Lorem, ipsum.</td>
+                                                            <td>Gurugram</td>
+                                                            <td>Lorem, ipsum.</td>
+                                                            <td>India</td>
+                                                            <td>122001</td>
+                                                            <td class="deactive-wrp">
+                                                                <!-- <span class="active-status">
+                                                                    <b>active</b>
+                                                                </span> -->
+                                                                <div class="toggle-btn">
+                                                                    <input type="checkbox" checked class="cb-value" />
+                                                                    <span class="round-btn"></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="Action-wrp">
+                                                                    <span class="edit" type="button" class="">
+                                                                        <i class="far fa-edit" title="edit"></i></i>
+                                                                    </span>
+                                                                    <span class="del danger">
+                                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <!-- <td>MT274305</td>  -->
+                                                            <td>DLF phase3</td>
+                                                            <td>DLF Lorem, ipsum.</td>
+                                                            <td>DLF Lorem, ipsum.</td>
+                                                            <td>Gurugram</td>
+                                                            <td>Lorem, ipsum.</td>
+                                                            <td>India</td>
+                                                            <td>122001</td>
+                                                            <td class="active-wrp">
+                                                                <!-- <span class="active-status">
+                                                                    <b>active</b>
+                                                                </span> -->
+                                                                <div class="toggle-btn active">
+                                                                    <input type="checkbox" checked class="cb-value" />
+                                                                    <span class="round-btn"></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
                                 </div>
+
+                                <div class="Edit-Tab_Wrapper  tab3" id="Basic-ItemEdit3" style="display: none;">
+                                    <div class="child-form">
+                                        <div class="modal-item1 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">File Name</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="File Name">
+                                        </div>
+                                        <!-- <div class="modal-item1 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">File URL</label>
+                                            <input type="text" class="form-control"  oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Https://">
+                                        </div>  -->
+                                        <div class="modal-item3 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">File Attachment</label>
+                                            <input type="file" class="form-control" id="FileAttach"
+                                                oninput="this.className = form-control ">
+                                        </div>
+                                        <div class="modal-item8 item-cmn save-btn">
+                                            <label for="recipient-name" class="col-form-label"></label>
+                                            <!-- <button type="button" class="btn btn-success" id="save"
+                                            >Save</button> -->
+                                            <button type="button" class="btn btn-success" title="Add New">Add
+                                                New</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                                title="Cancel">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="Company-masterWrapper Attachment_MasterWrapper">
+                                        <div class="Company-content">
+                                            <div class="Company_Table_wrapper">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Action</th>
+                                                            <th>File Name</th>
+                                                            <!-- <th>CompanyFID</th> -->
+                                                            <th>FileURL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="Action-wrp">
+                                                                    <!-- <span class="edit" type="button" class="">
+                                                                        <i class="far fa-edit" title="edit"></i></i>
+                                                                    </span> -->
+                                                                    <span class="del danger">
+                                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Demo1</td>
+                                                            <!-- <td>GG274305</td> -->
+                                                            <td><a href="#">https://www.google.com/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="Action-wrp">
+                                                                    <!-- <span class="edit" type="button" class="">
+                                                                        <i class="far fa-edit" title="edit"></i></i>
+                                                                    </span> -->
+                                                                    <span class="del danger">
+                                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Demo2</td>
+                                                            <!-- <td>RT110076</td> -->
+                                                            <td><a href="#">https://www.google.com/</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="Action-wrp">
+                                                                    <!-- <span class="edit" type="button" class="">
+                                                                        <i class="far fa-edit" title="edit"></i></i>
+                                                                    </span> -->
+                                                                    <span class="del danger">
+                                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>Demo3</td>
+                                                            <!-- <td>LT110076</td> -->
+                                                            <td><a href="#">https://www.google.com/</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <!-- <div class="modal-footer"> -->
+                                <!-- <button type="button" class="btn btn-secondary" id="prevBtn"
+                                        onclick="nextPrev(-1)">close</button>
+                                    <button type="button" class="btn btn-success" id="nextBtn"
+                                        onclick="nextPrev(1)">save</button> -->
+                                <!-- <button type="button" class="btn btn-success">Save</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button> -->
+                                <!-- </div> -->
                             </form>
                         </div>
                     </div>
@@ -851,6 +1325,26 @@
         </div>
         <!-- --Delete--Modal -->
 
+        <!--  Succcess--Modal-->
+            <div class="Success-Modal_Wrapper">
+                <div class="Success-child-wrp">
+                    <!-- <div class="success-close">
+                        <i class="fas fa-times Close-Icon"></i>
+                    </div> -->
+                    <div class="success-animation Success-icon">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+                   </div>
+                   <div class="success-title">
+                       <h2>Done!</h2>
+                   </div>
+                   <div class="success-text">
+                       <h3>Status Change successfully</h3>
+                   </div>
+                </div>
+                 
+            </div>
+        <!-- Success---modal -->
+
     </main>
 
 
@@ -865,19 +1359,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script> -->
+    <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
     <script src="/assets/js//jquery.min.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script type="text/javascript">
 
-    <script>
-        $('.cb-value').click(function () {
-            var mainParent = $(this).parent('.toggle-btn');
-            if ($(mainParent).find('input.cb-value').is(':checked')) {
-                $(mainParent).addClass('active');
-            } else {
-                $(mainParent).removeClass('active');
-            }
-
-        })
+        // $(document).ready (function (){ 
+        //     $("#myInput").on("keyup", function() {
+        //         debugger
+        //     var value = $(this).val().toLowerCase();
+        //     debugger
+        //     $("#myTable tr").filter(function() {
+        //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        //         debugger
+        //         console.log("myInput");
+        //     });
+        //     });
+        //  }) 
     </script>
 
 </body>

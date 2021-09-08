@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="assets/scss/style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
 
@@ -37,7 +37,7 @@
                     <ul class="unorder">
                         <li>
                             <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
-                            <a href="#">Logout</a>
+                            <a href="login.html">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -62,8 +62,18 @@
                         </a>
                     </li>
                     <li class="Side_item">
-                        <a href="compliance.html">
-                            compliance master
+                        <a href="activitymaster.html">
+                            activity master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="subactivity.html">
+                            SubActivity master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="sectionmaster.html">
+                            Section master
                         </a>
                     </li>
                     <li class="Side_item">
@@ -72,18 +82,13 @@
                         </a>
                     </li>
                     <li class="Side_item">
-                        <a href="activitymaster.html">
-                            activity master
+                        <a href="compliance.html">
+                            compliance master
                         </a>
                     </li>
                     <li class="Side_item">
-                        <a href="subactivity.html">
-                          SubActivity master
-                        </a>
-                    </li>
-                    <li class="Side_item">
-                        <a href="sectionmaster.html">
-                          Section master
+                        <a href="myactivity.html">
+                            My Activity
                         </a>
                     </li>
                 </ul>
@@ -96,13 +101,25 @@
             <div class="Company-content">
                 <div class="heading-wrp">
                     <div class="heading-txt">
-                       <h2>Company Type Master</h2> 
+                        <h2>Company Type Master</h2>
                     </div>
-                    <button class="AddForm" type="button" class="" data-bs-toggle="modal" data-bs-target="#ComTypMaster"
-                        data-bs-whatever="@mdo">
-                        <!-- <h2> Add </h2> -->
-                        <i class="fas fa-plus"></i>
-                    </button> 
+                    <div class="group-search">
+                        <form action="#">
+                            <input type="text" name="globle-search" id="globle-search" placeholder="Search...">
+                        </form>
+                        <div class="export-wrp">
+                            <button class="export-btn" title="export to excel">
+                                <!-- <i class="fas fa-file-excel"></i> -->
+                                export excel
+                            </button>
+                        </div>
+                        <div class="add-btn">
+                            <button class="AddForm" type="button" class="" data-bs-toggle="modal"
+                                data-bs-target="#ComTypMaster" data-bs-whatever="@mdo">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="Table_wrapper">
                     <table>
@@ -120,9 +137,8 @@
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#Editmodal" data-bs-whatever="@mdo">
-                                            <i class="far fa-edit" title="edit"  
-                                            data-bs-toggle="modal" data-bs-target=".EditMaster"
-                                            data-bs-whatever="@mdo"></i> 
+                                            <i class="far fa-edit" title="edit" data-bs-toggle="modal"
+                                                data-bs-target=".EditMaster" data-bs-whatever="@mdo"></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
@@ -133,9 +149,10 @@
                                 <!-- <td>1</td> -->
                                 <td>GG274305</td>
                                 <td class="active-wrp">
-                                    <span class="active-status">
-                                        <b>active</b>
-                                    </span>
+                                    <div class="toggle-btn active">
+                                        <input type="checkbox" checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -143,9 +160,8 @@
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#Editmodal" data-bs-whatever="@mdo">
-                                            <i class="far fa-edit" title="edit"  
-                                            data-bs-toggle="modal" data-bs-target=".EditMaster"
-                                            data-bs-whatever="@mdo"></i> 
+                                            <i class="far fa-edit" title="edit" data-bs-toggle="modal"
+                                                data-bs-target=".EditMaster" data-bs-whatever="@mdo"></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
@@ -155,10 +171,11 @@
                                 </td>
                                 <!-- <td>2</td> -->
                                 <td>RT274305</td>
-                                <td class="active-wrp">
-                                    <span class="active-status">
-                                        <b>active</b>
-                                    </span>
+                                <td class="deactive-wrp">
+                                    <div class="toggle-btn">
+                                        <input type="checkbox" checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -166,9 +183,8 @@
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#Editmodal" data-bs-whatever="@mdo">
-                                            <i class="far fa-edit" title="edit"  
-                                            data-bs-toggle="modal" data-bs-target=".EditMaster"
-                                            data-bs-whatever="@mdo"></i> 
+                                            <i class="far fa-edit" title="edit" data-bs-toggle="modal"
+                                                data-bs-target=".EditMaster" data-bs-whatever="@mdo"></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
                                             data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
@@ -178,10 +194,11 @@
                                 </td>
                                 <!-- <td>3</td> -->
                                 <td>MT274305</td>
-                                <td class="deactive-wrp">
-                                    <span class="deactive-status">
-                                        <b>InActive</b>
-                                    </span>
+                                <td class="active-wrp">
+                                    <div class="toggle-btn active">
+                                        <input type="checkbox" checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -190,122 +207,145 @@
             </div>
         </div>
         <!--  -->
-  <!----Add-----popup--of ---company-->
+        <!----Add-----popup--of ---company-->
 
-  <div class="modal fade Company_Modal_Wrapper" id="ComTypMaster" tabindex="-1" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-md">
-      <div class="modal-content">
-          <div class="modal-header">
-              <div class="Modal-title-Wrp">
-                 <h4>Add</h4>
-              </div>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <div class="modal-body-content">
-                  <form id="registerForm">
-                      <div class="Tab_Wrapper tab1" id="Basic-Item1">
-                          <div class="child-form">
-                              <div class="modal-item1 item-cmn">
-                                  <label for="recipient-name" class="col-form-label">Compliance Type</label>
-                                  <input type="text" class="form-control"
-                                      oninput="this.className = form-control " id="recipient-name"
-                                      placeholder="Compliance Type">
-                              </div> 
-                              <div class="modal-item2 item-cmn">
-                                <label for="message-text" class="col-form-label">Status</label>
-                                <select>
-                                    <option value="1">Active</option>
-                                    <option value="0">InActive</option>
-                                </select>
-                            </div> 
-                          </div>
-                      </div>  
-                      <div class="modal-footer">
-                      <!-- <button type="button" class="btn btn-secondary" id="prevBtn"
+        <div class="modal fade Company_Modal_Wrapper" id="ComTypMaster" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="Modal-title-Wrp">
+                            <h4>Add</h4>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-content">
+                            <form id="registerForm">
+                                <div class="Tab_Wrapper tab1" id="Basic-Item1">
+                                    <div class="child-form">
+                                        <div class="modal-item1 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">Compliance Type</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Compliance Type">
+                                        </div>
+                                        <!-- <div class="modal-item2 item-cmn">
+                                            <label for="message-text" class="col-form-label">Status</label>
+                                            <select>
+                                                <option value="1">Active</option>
+                                                <option value="0">InActive</option>
+                                            </select>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- <button type="button" class="btn btn-secondary" id="prevBtn"
                               onclick="nextPrev(-1)">close</button>
                           <button type="button" class="btn btn-success" id="nextBtn"
                               onclick="nextPrev(1)">save</button> -->
-                      <button type="button" class="btn btn-success"title="save">Save</button>
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" title="close">Close</button>
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- popup--of ---company- -->
-
-<!-- Edit---Modal -->
-<div class="modal fade Company_Modal_Wrapper EditMaster" id="EditComTypMaster" tabindex="-1"
-aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-md">
-    <div class="modal-content">
-        <div class="modal-header">
-            <div class="Modal-title-Wrp">
-                <h4>Edit</h4>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="modal-body-content">
-                <form id="registerForm">
-                    <div class="Tab_Wrapper tab1" id="Basic-Item1">
-                        <div class="child-form"> 
-                            <div class="modal-item1 item-cmn">
-                                <label for="recipient-name" class="col-form-label">Compliance Type</label>
-                                <input type="text" class="form-control"
-                                    oninput="this.className = form-control " id="recipient-name"
-                                    placeholder="Compliance Type">
-                            </div>
-                            <div class="modal-item2 item-cmn">
-                                <label for="message-text" class="col-form-label">Status</label>
-                                <select>
-                                    <option value="1">Active</option>
-                                    <option value="0">InActive</option>
-                                </select>
-                            </div> 
-                        </div>
-
+                                    <button type="button" class="btn btn-success" title="save">Save</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                        title="close">Close</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success" title="save">Save</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" title="close">Close</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- edit--modal ---end--here -->
+        <!-- popup--of ---company- -->
 
- <!-- Delete--modal -->
- <div class="modal fade Dialog-Wrapper" id="Delete-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
- aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered modal-md">
-     <div class="modal-content MuiDialog-paperWidthSm">
-         <div class="Dailog-img">
-             <i class="fas fa-exclamation-circle"></i>
-         </div>
-         <div class="Dailog-content">
-             <h2>Are You Sure ?</h2>
-             <p>you want to delete?</p>
-         </div>
-         <div class="modal-footer dailog-grp-btn">
-             <button type="button" class="btn btn-secondary cancel-btn"
-                 data-bs-dismiss="modal"  title="cancel">CANCEL</button>
-             <button type="button"  class="btn btn-danger ok-btn"  title="ok" data-bs-dismiss="modal">OK</button>
-         </div>
-     </div>
- </div>
-</div>
-<!-- --Delete--Modal -->
+        <!-- Edit---Modal -->
+        <div class="modal fade Company_Modal_Wrapper EditMaster" id="EditComTypMaster" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="Modal-title-Wrp">
+                            <h4>Edit</h4>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-content">
+                            <form id="registerForm">
+                                <div class="Tab_Wrapper tab1" id="Basic-Item1">
+                                    <div class="child-form">
+                                        <div class="modal-item1 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">Compliance Type</label>
+                                            <input type="text" class="form-control"
+                                                oninput="this.className = form-control " id="recipient-name"
+                                                placeholder="Compliance Type">
+                                        </div>
+                                        <!-- <div class="modal-item2 item-cmn">
+                                            <label for="message-text" class="col-form-label">Status</label>
+                                            <select>
+                                                <option value="1">Active</option>
+                                                <option value="0">InActive</option>
+                                            </select>
+                                        </div> -->
+                                    </div>
+
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" title="save">Save</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                title="close">Close</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- edit--modal ---end--here -->
+
+        <!-- Delete--modal -->
+        <div class="modal fade Dialog-Wrapper" id="Delete-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content MuiDialog-paperWidthSm">
+                    <div class="Dailog-img">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="Dailog-content">
+                        <h2>Are You Sure ?</h2>
+                        <p>you want to delete?</p>
+                    </div>
+                    <div class="modal-footer dailog-grp-btn">
+                        <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal"
+                            title="cancel">CANCEL</button>
+                        <button type="button" class="btn btn-danger ok-btn" title="ok"
+                            data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- --Delete--Modal -->
+
+              <!--  Succcess--Modal-->
+              <div class="Success-Modal_Wrapper">
+                <div class="Success-child-wrp">
+                    <!-- <div class="success-close">
+                        <i class="fas fa-times Close-Icon"></i>
+                    </div> -->
+                    <div class="success-animation Success-icon">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+                   </div>
+                   <div class="success-title">
+                       <h2>Done!</h2>
+                   </div>
+                   <div class="success-text">
+                       <h3>Status Change successfully</h3>
+                   </div>
+                </div>
+                 
+            </div>
+        <!-- Success---modal -->
 
 
-</main>
+    </main>
 
 
     <!-- script---section -->

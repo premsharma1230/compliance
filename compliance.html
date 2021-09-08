@@ -37,7 +37,7 @@
                     <ul class="unorder">
                         <li>
                             <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
-                            <a href="#">Logout</a>
+                            <a href="login.html">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -62,16 +62,6 @@
                         </a>
                     </li>
                     <li class="Side_item">
-                        <a href="compliance.html">
-                            Compliance master
-                        </a>
-                    </li>
-                    <li class="Side_item">
-                        <a href="compliancetypemaster.html">
-                            compliance type master
-                        </a>
-                    </li>
-                    <li class="Side_item">
                         <a href="activitymaster.html">
                             activity master
                         </a>
@@ -86,6 +76,21 @@
                             Section master
                         </a>
                     </li>
+                    <li class="Side_item">
+                        <a href="compliancetypemaster.html">
+                            compliance type master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliance.html">
+                            compliance master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="myactivity.html">
+                            My Activity
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -98,12 +103,24 @@
                     <div class="heading-txt">
                         <h2>Compliance master</h2>
                     </div>
-                    <a href="AddCompliance.html" class="AddCompliance">
-                        <button class="AddForm" type="button">
-                            <!-- <h2> Add </h2> -->
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </a>
+                    <div class="group-search">
+                        <form action="#">
+                            <input type="text" name="globle-search" id="globle-search" placeholder="Search...">
+                        </form>
+                        <div class="export-wrp">
+                            <button class="export-btn" title="export to excel">
+                                <!-- <i class="fas fa-file-excel"></i> -->
+                                export excel
+                            </button>
+                        </div>
+                        <div class="add-btn">
+                            <a href="AddCompliance.html" class="AddCompliance">
+                                <button class="AddForm" type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="Table_wrapper">
@@ -118,7 +135,7 @@
                                 <th>SubActivity</th>
                                 <th>ComplianceType</th>
                                 <th>Section</th>
-                                <th>ComplianceName</th> 
+                                <th>ComplianceName</th>
                                 <th>Frequency</th>
                                 <th>StartDate</th>
                                 <th>ComplianceDescription</th>
@@ -142,7 +159,7 @@
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo">
+                                            data-bs-target=".EditMaster1" data-bs-whatever="@mdo">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -163,9 +180,10 @@
                                 <td>Incidunt.</td>
                                 <td>Unde.</td>
                                 <td class="deactive-wrp">
-                                    <span class="deactive-status">
-                                        <b>InActive</b>
-                                    </span>
+                                    <div class="toggle-btn">
+                                        <input type="checkbox" checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
                                 </td>
                                 <!--    <td>Qui.</td>
                                 <td>Placeat.</td>
@@ -184,7 +202,7 @@
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo">
+                                            data-bs-target=".EditMaster1" data-bs-whatever="@mdo">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -205,9 +223,10 @@
                                 <td>Incidunt.</td>
                                 <td>Unde.</td>
                                 <td class="deactive-wrp">
-                                    <span class="deactive-status">
-                                        <b>InActive</b>
-                                    </span>
+                                    <div class="toggle-btn">
+                                        <input type="checkbox" checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
                                 </td>
                                 <!--    <td>Qui.</td>
                                 <td>Placeat.</td>
@@ -226,7 +245,7 @@
                                 <td>
                                     <div class="Action-wrp">
                                         <span class="edit" type="button" class="" data-bs-toggle="modal"
-                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo">
+                                            data-bs-target=".EditMaster1" data-bs-whatever="@mdo">
                                             <i class="far fa-edit" title="edit"></i></i>
                                         </span>
                                         <span class="del danger" type="button" class="" data-bs-toggle="modal"
@@ -247,9 +266,10 @@
                                 <td>Incidunt.</td>
                                 <td>Unde.</td>
                                 <td class="active-wrp">
-                                    <span class="active-status">
-                                        <b>active</b>
-                                    </span>
+                                    <div class="toggle-btn active">
+                                        <input type="checkbox" checked class="cb-value" />
+                                        <span class="round-btn"></span>
+                                    </div>
                                 </td>
                                 <!--  <td>Qui.</td>
                                 <td>Placeat.</td>
@@ -289,20 +309,17 @@
                                     <div class="child-form">
                                         <div class="modal-item1 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Company</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Company">
                                         </div>
                                         <div class="modal-item2 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Location</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Location">
                                         </div>
                                         <div class="modal-item3 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Activity</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Activity">
                                         </div>
                                         <!-- <div class="modal-item3 item-cmn">
@@ -314,125 +331,105 @@
                                         </div> -->
                                         <div class="modal-item4 item-cmn">
                                             <label for="recipient-name" class="col-form-label">SubActivity</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="SubActivity">
                                         </div>
                                         <div class="modal-item5 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Compliance Type</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="ComplianceType">
                                         </div>
                                         <div class="modal-item6 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Section</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Section">
                                         </div>
                                         <div class="modal-item7 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Compliance Name</label>
-                                            <input type="text" class="form-control"
-                                                maxlength="255"
-                                                id="recipient-name" placeholder="Compliance Name">
+                                            <input type="text" class="form-control" maxlength="255" id="recipient-name"
+                                                placeholder="Compliance Name">
                                         </div>
                                         <div class="modal-item8 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Compliance
                                                 Description</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
-                                                maxlength="255" placeholder="Compliance Description">
+                                            <input type="text" class="form-control" id="recipient-name" maxlength="255"
+                                                placeholder="Compliance Description">
                                         </div>
                                         <div class="modal-item9 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Frequency</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Frequency">
                                         </div>
                                         <div class="modal-item10 item-cmn">
                                             <label for="recipient-name" class="col-form-label">StartDate</label>
-                                            <input type="datetime-local" class="form-control"
-                                                id="recipient-name"
+                                            <input type="datetime-local" class="form-control" id="recipient-name"
                                                 placeholder="StartDate">
                                         </div>
                                         <div class="modal-item11 item-cmn">
                                             <label for="recipient-name" class="col-form-label">DueDate</label>
-                                            <input type="datetime-local" class="form-control"
-                                                id="recipient-name"
+                                            <input type="datetime-local" class="form-control" id="recipient-name"
                                                 placeholder="DueDate">
                                         </div>
                                         <div class="modal-item12 item-cmn">
                                             <label for="recipient-name" class="col-form-label">NoOfOcurrences</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="NoOfOcurrences">
                                         </div>
                                         <div class="modal-item13 item-cmn">
                                             <label for="recipient-name"
                                                 class="col-form-label">DailyEveryAfterDays</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="DailyEveryAfterDays">
                                         </div>
                                         <div class="modal-item14 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Weekly Days</label>
-                                            <input type="week" class="form-control"
-                                                id="recipient-name"
+                                            <input type="week" class="form-control" id="recipient-name"
                                                 placeholder="Weekly Days">
                                         </div>
                                         <div class="modal-item15 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Monthly Day</label>
-                                            <input type="month" class="form-control"
-                                                id="recipient-name"
+                                            <input type="month" class="form-control" id="recipient-name"
                                                 placeholder="Monthly Day">
                                         </div>
                                         <div class="modal-item16 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Monthly Month</label>
-                                            <input type="month" class="form-control"
-                                                id="recipient-name"
+                                            <input type="month" class="form-control" id="recipient-name"
                                                 placeholder="Monthly Month">
                                         </div>
                                         <div class="modal-item17 item-cmn">
                                             <label for="recipient-name"
                                                 class="col-form-label">YearlyEveryAfterYears</label>
-                                            <input type="text" class="yearpicker  form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="yearpicker  form-control" id="recipient-name"
                                                 placeholder="YearlyEveryAfterYears">
                                         </div>
                                         <div class="modal-item18 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Yearly Month</label>
-                                            <input type="text" class="form-control yearpicker "
-                                                id="recipient-name"
+                                            <input type="text" class="form-control yearpicker " id="recipient-name"
                                                 placeholder="Yearly Month">
                                         </div>
                                         <div class="modal-item19 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Yearly Day</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Yearly Day">
                                         </div>
                                         <div class="modal-item20 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Links Of Sites</label>
-                                            <input type="url" class="form-control"
-                                                id="recipient-name"
+                                            <input type="url" class="form-control" id="recipient-name"
                                                 placeholder="Links Of Sites">
                                         </div>
                                         <div class="modal-item21 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Reminder1NoOfDays</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Reminder1NoOfDays">
                                         </div>
                                         <div class="modal-item22 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Reminder2NoOfDays</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Reminder2NoOfDays">
                                         </div>
                                         <div class="modal-item23 item-cmn">
                                             <label for="recipient-name" class="col-form-label">Reminder3NoOfDays</label>
-                                            <input type="text" class="form-control"
-                                                id="recipient-name"
+                                            <input type="text" class="form-control" id="recipient-name"
                                                 placeholder="Reminder3NoOfDays">
                                         </div>
 
@@ -440,7 +437,8 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-success" title="save">Save</button>
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" title="close">Close</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                        title="close">Close</button>
                                 </div>
                             </form>
                         </div>
@@ -450,102 +448,94 @@
         </div>
         <!-- popup--of ---company- -->
 
-  <!-- Edit---Modal -->
-  <div class="modal fade Company_Modal_Wrapper EditMaster" id="EditComTypMaster" tabindex="-1"
-  aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content">
-          <div class="modal-header">
-              <div class="Modal-title-Wrp">
-                  <h4>Edit</h4>
-              </div>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <div class="modal-body-content">
-                  <form class="Edit_registerForm" id="registerForm">
-                      <div class="Tab_Wrapper tab1" id="Basic-Item1">
-                          <div class="child-form">
-                              <div class="modal-item1 item-cmn">
-                                  <label for="recipient-name" class="col-form-label">Company Name</label>
-                                  <input type="text" class="form-control"
-                                      id="recipient-name"
-                                      placeholder="Company Name">
-                              </div>
-                              <div class="modal-item2 item-cmn">
-                                  <label for="message-text" class="col-form-label">Location</label>
-                                  <input type="text" class="form-control"
-                                      id="recipient-name"
-                                      placeholder="Location">
-                              </div>
-                              <div class="modal-item3 item-cmn">
-                                  <label for="message-text" class="col-form-label">Activity</label>
-                                  <input type="text" class="form-control"
-                                      id="recipient-name"
-                                      placeholder="Activity">
-                              </div>
-                              <div class="modal-item4 item-cmn">
-                                <label for="message-text" class="col-form-label">SubActivity</label>
-                                <input type="text" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="SubActivity">
-                            </div>
-                            <div class="modal-item5 item-cmn">
-                                <label for="message-text" class="col-form-label">Compliance Type</label>
-                                <input type="text" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="Compliance Type">
-                            </div>
-                            <div class="modal-item6 item-cmn">
-                                <label for="message-text" class="col-form-label">Section</label>
-                                <input type="text" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="Section">
-                            </div>
-                            <div class="modal-item7 item-cmn">
-                                <label for="message-text" class="col-form-label">Compliance Name</label>
-                                <input type="text" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="Compliance Name">
-                            </div> 
-                            <div class="modal-item9 item-cmn">
-                                <label for="message-text" class="col-form-label">Frequency</label>
-                                <input type="text" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="Frequency">
-                            </div> 
-                            <div class="modal-item10 item-cmn">
-                                <label for="message-text" class="col-form-label">Start Date</label>
-                                <input type="date" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="Start Date">
-                            </div> 
-                            <div class="modal-item8 item-cmn">
-                                <label for="message-text" class="col-form-label">Compliance Description</label>
-                                <input type="text" class="form-control"
-                                    id="recipient-name"
-                                    placeholder="Compliance Description">
-                            </div>
-                              <div class="modal-item11 item-cmn">
-                                  <label for="message-text" class="col-form-label">Status</label>
-                                  <select>
-                                      <option value="1">Active</option>
-                                      <option value="0">InActive</option>
-                                  </select>
-                              </div> 
-                          </div>
-                      </div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-success" title="save">Save</button>
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"title="close">Close</button>
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- edit--modal ---end--here -->
+        <!-- Edit---Modal -->
+        <div class="modal fade Company_Modal_Wrapper EditMaster1" id="EditComTypMaster" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="Modal-title-Wrp">
+                            <h4>Edit</h4>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-content">
+                            <form class="Edit_registerForm" id="registerForm">
+                                <div class="Tab_Wrapper tab1" id="Basic-Item1">
+                                    <div class="child-form">
+                                        <div class="modal-item1 item-cmn">
+                                            <label for="recipient-name" class="col-form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Company Name">
+                                        </div>
+                                        <div class="modal-item2 item-cmn">
+                                            <label for="message-text" class="col-form-label">Location</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Location">
+                                        </div>
+                                        <div class="modal-item3 item-cmn">
+                                            <label for="message-text" class="col-form-label">Activity</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Activity">
+                                        </div>
+                                        <div class="modal-item4 item-cmn">
+                                            <label for="message-text" class="col-form-label">SubActivity</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="SubActivity">
+                                        </div>
+                                        <div class="modal-item5 item-cmn">
+                                            <label for="message-text" class="col-form-label">Compliance Type</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Compliance Type">
+                                        </div>
+                                        <div class="modal-item6 item-cmn">
+                                            <label for="message-text" class="col-form-label">Section</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Section">
+                                        </div>
+                                        <div class="modal-item7 item-cmn">
+                                            <label for="message-text" class="col-form-label">Compliance Name</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Compliance Name">
+                                        </div>
+                                        <div class="modal-item9 item-cmn">
+                                            <label for="message-text" class="col-form-label">Frequency</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Frequency">
+                                        </div>
+                                        <div class="modal-item10 item-cmn">
+                                            <label for="message-text" class="col-form-label">Start Date</label>
+                                            <input type="date" class="form-control" id="recipient-name"
+                                                placeholder="Start Date">
+                                        </div>
+                                        <div class="modal-item8 item-cmn">
+                                            <label for="message-text" class="col-form-label">Compliance
+                                                Description</label>
+                                            <input type="text" class="form-control" id="recipient-name"
+                                                placeholder="Compliance Description">
+                                        </div>
+                                        <div class="modal-item11 item-cmn">
+                                            <label for="message-text" class="col-form-label">Status</label>
+                                            <select>
+                                                <option value="1">Active</option>
+                                                <option value="0">InActive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" title="save">Save</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                        title="close">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- edit--modal ---end--here -->
 
 
         <!-- Delete--modal -->
@@ -561,14 +551,38 @@
                         <p>you want to delete?</p>
                     </div>
                     <div class="modal-footer dailog-grp-btn">
-                        <button type="button" class="btn btn-secondary cancel-btn"
-                            data-bs-dismiss="modal"  title="cancel">CANCEL</button>
-                        <button type="button"  title="ok" class="btn btn-danger ok-btn" data-bs-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal"
+                            title="cancel">CANCEL</button>
+                        <button type="button" title="ok" class="btn btn-danger ok-btn"
+                            data-bs-dismiss="modal">OK</button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- --Delete--Modal -->
+
+        <!--  Succcess--Modal-->
+        <div class="Success-Modal_Wrapper">
+            <div class="Success-child-wrp">
+                <!-- <div class="success-close">
+                        <i class="fas fa-times Close-Icon"></i>
+                    </div> -->
+                <div class="success-animation Success-icon">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+                <div class="success-title">
+                    <h2>Done!</h2>
+                </div>
+                <div class="success-text">
+                    <h3>Status Change successfully</h3>
+                </div>
+            </div>
+
+        </div>
+        <!-- Success---modal -->
 
 
     </main>

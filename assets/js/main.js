@@ -40,35 +40,74 @@ $(document).ready(function(){
   $(".Table_wrapper tbody tr").dblclick  (function () {
     // debugger
     $('#EditComTypMaster').modal('toggle');
-    console.log(EditComTypMaster)
+    // console.log(EditComTypMaster)
   })
 
-// -----Toool---Tips-----// 
-// $('[data-toggle="tooltip"]').tooltip();
+  // $(".ReviewerEdit .Table_wrapper tbody tr").dblclick  (function () {
+  //   // debugger
+  //   $('#ReviewerEdit').modal('toggle');
+  //   console.log(ReviewerEdit)
+  // })
 
-// --------------year--picker
-// $(function() {  
-//   $('.yearpicker').yearpicker();
-// });
+  // $(".preparerEdit .Table_wrapper tbody tr").dblclick  (function () {
+  //   // debugger
+  //   $('#preparerEdit').modal('toggle');
+  //   // console.log(EditComTypMaster)
+  // })
 
+//---->>>>>>>>>>>>------Switch---Toggle--Button----<<<<<<<<<------//
+
+
+$('.cb-value').click(function () {
+  var mainParent = $(this).parent('.toggle-btn');
+  if ($(mainParent).find('input.cb-value').is(':checked')) {
+      $(mainParent).addClass('active');
+  } 
+  else {
+      $(mainParent).removeClass('active');
+  }
+
+})
+
+//---->>>>>>>>>>>>------Switch---Toggle--Button----<<<<<<<<<------//
  
 
+  $(".toggle-btn").click(function (){
+     $(".Success-Modal_Wrapper").fadeIn();
+     $(this).css("transition", "all .3s ease-in-out");
+     setTimeout(function(){ 
+        $(".Success-Modal_Wrapper").fadeOut("slow");
+         $(this).css("transition", "all .3s ease-in-out"); 
+    },1550);
+  })
 
 
-// $("#datepicker").datepicker({
-//   format: "yyyy",
-//   viewMode: "years", 
-//   minViewMode: "years"
-// });
-
-
-  });
+  // $(".success-close").click(function (){
+  //   $(".Success-Modal_Wrapper").css("display","none");
+  //    $(this).css("transition", "all .3s ease-in-out");
+  // })
+ 
+});
 
 // ------>
 
 function openBasicItem(ListName) {
   var i;
   var x = document.getElementsByClassName("Tab_Wrapper");
+  // console.log(openBasicItem);
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(ListName).style.display = "block";  
+}
+
+
+// -------->
+// ------>
+
+function openBasicItemEdit(ListName) {
+  var i;
+  var x = document.getElementsByClassName("Edit-Tab_Wrapper ");
   // console.log(openBasicItem);
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
@@ -95,46 +134,27 @@ function openPattern(ListName) {
 // -------->
 
 
-// --<<<<<<<<<<<<<<------Form-Validation-------------->>>>>>>>>>
+// ---CK---Editor-------//
+// ClassicEditor.create(document.querySelector("#editor"));
 
- // (function () {
-//   'use strict'
+// document.querySelector("form").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log(document.getElementById("editor").value);
+// });
+
+
+// ------Standard--Ck--Editor--//
+
+var editor = CKEDITOR.replace('editor'); 
+editor.on('change', function (evt) { 
+    $('#hiddedn input').val(evt.editor.getData());
+});
+
+
+// ------Ck---Editor--end----here----//
+
 
  
-//   var forms = document.querySelectorAll('.needs-validation')
-
-//   // Loop over them and prevent submission
-//   Array.prototype.slice.call(forms)
-//     .forEach(function (form) {
-//       form.addEventListener('submit', function (event) {
-//         if (!form.checkValidity()) {
-//           event.preventDefault()
-//           event.stopPropagation()
-//         }
-
-//         form.classList.add('was-validated')
-//       }, false)
-//     })
-// })()
-
-// --<<<<<<<<<<<<<<------Form-Validation-------------->>>>>>>>>>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // var currentTab = 0;
   // showTab(currentTab);
@@ -231,3 +251,5 @@ function openPattern(ListName) {
 //               </div>`
 //     });
 // });
+ 
+ 

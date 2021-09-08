@@ -39,7 +39,7 @@
                     <ul class="unorder">
                         <li>
                             <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
-                            <a href="#">Logout</a>
+                            <a href="login.html">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -64,16 +64,6 @@
                         </a>
                     </li>
                     <li class="Side_item">
-                        <a href="compliance.html">
-                            Compliance master
-                        </a>
-                    </li>
-                    <li class="Side_item">
-                        <a href="compliancetypemaster.html">
-                            compliance type master
-                        </a>
-                    </li>
-                    <li class="Side_item">
                         <a href="activitymaster.html">
                             activity master
                         </a>
@@ -88,13 +78,28 @@
                             Section master
                         </a>
                     </li>
+                    <li class="Side_item">
+                        <a href="compliancetypemaster.html">
+                            compliance type master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliance.html">
+                            compliance master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="myactivity.html">
+                            My Activity
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
         <!-- sidber----end--here -->
 
         <!--  -->
-        <div class="Company-masterWrapper Attachment_MasterWrapper">
+        <div class="Company-masterWrapper Attachment_MasterWrapper" id="AddCompliance_table">
             <div class="Company-content" id="Company-content">
                 <div class="heading-wrp">
                     <div class="heading-txt">
@@ -112,10 +117,9 @@
                                 <div class="child-form">
                                     <div class="modal-item1 item-cmn">
                                         <label for="recipient-name" class="col-form-label">Company</label>
-                                        <input type="text" class="form-control"
-                                            oninput="this.className = form-control " id="recipient-name"
-                                            placeholder="Company">
-                                            <!-- <div class="valid-feedback">
+                                        <input type="text" class="form-control" oninput="this.className = form-control "
+                                            id="recipient-name" placeholder="Company">
+                                        <!-- <div class="valid-feedback">
                                                 please provide valid field
                                               </div> -->
                                         <!-- <select oninput="this.className = form-control ">
@@ -181,28 +185,26 @@
                                         <input type="text" class="form-control" oninput="this.className = form-control "
                                             maxlength="255" id="recipient-name" placeholder="Compliance Name">
                                     </div>
+                                    <div class="modal-item9 item-cmn">
+                                        <label for="recipient-name" class="col-form-label">Preparer</label>
+                                        <input type="text" class="form-control" id="Preparer"  placeholder="Preparer">
+                                    </div>
+                                    <div class="modal-item10 item-cmn">
+                                        <label for="recipient-name" class="col-form-label">Reviewer </label>
+                                        <input type="text" class="form-control" id="Reviewer "  placeholder="Reviewer ">
+                                    </div>
+                                    <div class="modal-item10 item-cmn">
+                                        <label for="recipient-name" class="col-form-label">Esclation</label>
+                                        <input type="text" class="form-control" id="Esclation"  placeholder="Esclation">
+                                    </div>
                                     <div class="modal-item8 item-cmn">
                                         <label for="recipient-name" class="col-form-label">Compliance
                                             Description</label>
-                                        <input type="text" class="form-control" oninput="this.className = form-control "
-                                            id="recipient-name" maxlength="255" placeholder="Compliance Description">
-                                    </div>
-                                    <!-- <div class="modal-item9 item-cmn">
-                                        <label for="recipient-name" class="col-form-label">Frequency</label>
-                                        <input type="text" class="form-control" oninput="this.className = form-control "
-                                            id="recipient-name" placeholder="Frequency">
-                                    </div> -->
-                                    <!-- <div class="modal-item10 item-cmn">
-                                        <label for="recipient-name" class="col-form-label">StartDate</label>
-                                        <input type="datetime-local" class="form-control"
-                                            oninput="this.className = form-control " id="recipient-name"
-                                            placeholder="StartDate">
-                                    </div> -->
-                                    <div class="modal-item23 item-cmn">
-                                        <!-- <label for="recipient-name" class="col-form-label">Reminder3NoOfDays</label>
-                                        <input type="text" class="form-control"
-                                            oninput="this.className = form-control " id="recipient-name"
-                                            placeholder="Reminder3NoOfDays"> -->
+                                        <!-- <input type="text" class="form-control" oninput="this.className = form-control "
+                                            id="recipient-name" maxlength="255" placeholder="Compliance Description"> -->
+                                        <textarea class="form-control " id="editor" name="editor"></textarea>
+                                    </div> 
+                                    <div class="modal-item23 item-cmn"> 
                                         <a href="" class="Start_Meeting" data-bs-toggle="modal"
                                             data-bs-target=".Make-Recurring-Modal">
                                             <b class=""><i class="fas fa-sync-alt"></i></b>
@@ -212,11 +214,113 @@
                                             </span>
                                         </a>
                                     </div>
+                                    <div class="modal-item11 item-cmn"> 
+                                        <label for="recipient-name" class="col-form-label">Name</label>
+                                        <input type="text" class="form-control" id="Name_input"  placeholder="Name">
+                                    </div>
+                                    <div class="modal-item12 item-cmn"> 
+                                        <label for="recipient-name" class="col-form-label">File Attachment</label>
+                                        <input type="file" class="form-control" id="FileAttach"  placeholder="Frequency">
+                                    </div>
+                                    <div class="modal-item10 item-cmn Dark_btn_Wrp">
+                                        <!-- <label for="recipient-name" class="col-form-label">StartDate</label> -->
+                                        <button type="button" class="btn btn-dark" id="file_AttachBtn" title="Add">Add</button>
+                                    </div> 
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer" style="margin-bottom: 1rem;">
                                 <button type="button" class="btn btn-success" title="save">Save</button>
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" title="close">Close</button>
+                                <a href="compliance.html">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                        title="close">Close</button>
+                                </a>
+                            </div>
+                            <div class="Table_wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>action</th>
+                                            <th>Name</th>
+                                            <th>File</th>
+                                            <!-- <th>Esclation </th>
+                                            <th>Status</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="Action-wrp">
+                                                    <!-- <span class="edit" type="button" class="" data-bs-toggle="modal"
+                                                        data-bs-target="#Editmodal" data-bs-whatever="@mdo">
+                                                        <i class="far fa-edit" title="edit" data-bs-toggle="modal"
+                                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo"></i>
+                                                    </span> -->
+                                                    <span class="del danger" type="button" class="" data-bs-toggle="modal"
+                                                        data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
+                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>Name1</td>
+                                            <td>Lorem, ipsum.</td>
+                                            <!-- <td>Lorem, ipsum.</td>
+                                            <td class="active-wrp">
+                                                <div class="toggle-btn active">
+                                                    <input type="checkbox" checked class="cb-value" />
+                                                    <span class="round-btn"></span>
+                                                </div>
+                                            </td> -->
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="Action-wrp">
+                                                    <!-- <span class="edit" type="button" class="" data-bs-toggle="modal"
+                                                        data-bs-target="#Editmodal" data-bs-whatever="@mdo">
+                                                        <i class="far fa-edit" title="edit" data-bs-toggle="modal"
+                                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo"></i>
+                                                    </span> -->
+                                                    <span class="del danger" type="button" class="" data-bs-toggle="modal"
+                                                        data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
+                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>Name2</td>
+                                            <td>Lorem, ipsum.</td>
+                                            <!-- <td>Lorem, ipsum.</td>
+                                            <td class="deactive-wrp">
+                                                <div class="toggle-btn">
+                                                    <input type="checkbox" checked class="cb-value" />
+                                                    <span class="round-btn"></span>
+                                                </div>
+                                            </td> -->
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="Action-wrp">
+                                                    <!-- <span class="edit" type="button" class="" data-bs-toggle="modal"
+                                                        data-bs-target="#Editmodal" data-bs-whatever="@mdo">
+                                                        <i class="far fa-edit" title="edit" data-bs-toggle="modal"
+                                                            data-bs-target=".EditMaster" data-bs-whatever="@mdo"></i>
+                                                    </span> -->
+                                                    <span class="del danger" type="button" class="" data-bs-toggle="modal"
+                                                        data-bs-target="#Delete-modal" data-bs-whatever="@mdo">
+                                                        <i class="fas fa-trash-alt" title="delete"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>Name3</td>
+                                            <td>Lorem, ipsum.</td>
+                                            <!-- <td>Lorem, ipsum.</td>
+                                            <td class="active-wrp">
+                                                <div class="toggle-btn active">
+                                                    <input type="checkbox" checked class="cb-value" />
+                                                    <span class="round-btn"></span>
+                                                </div>
+                                            </td> -->
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </form>
                     </div>
@@ -344,14 +448,14 @@
                                                                 <option value="0">19:00 (19 Hours)</option>
                                                                 <option value="0">19:30 (19.5 Hours)</option>
                                                                 <option value="0">20:00 (20 Hours)</option>
-                                                                <option value="0">20:30 (20.5 Hours)</option> 
-                                                                <option value="0">21:00 (21 Hours)</option> 
-                                                                <option value="0">21:30 (21.5 Hours)</option> 
-                                                                <option value="0">22:00 (22 Hours)</option> 
-                                                                <option value="0">22:30 (22.5 Hours)</option> 
-                                                                <option value="0">23:00 (23 Hours)</option> 
-                                                                <option value="0">23:30 (23.5 Hours)</option> 
-                                                                <option value="0">24:00 (24 Hours)</option>  
+                                                                <option value="0">20:30 (20.5 Hours)</option>
+                                                                <option value="0">21:00 (21 Hours)</option>
+                                                                <option value="0">21:30 (21.5 Hours)</option>
+                                                                <option value="0">22:00 (22 Hours)</option>
+                                                                <option value="0">22:30 (22.5 Hours)</option>
+                                                                <option value="0">23:00 (23 Hours)</option>
+                                                                <option value="0">23:30 (23.5 Hours)</option>
+                                                                <option value="0">24:00 (24 Hours)</option>
                                                             </select>
                                                         </div>
                                                         <div class="panel3  panel-cmn">
@@ -360,7 +464,7 @@
                                                                 <option value="0">0 minutes</option>
                                                                 <option value="0">5 Minutes</option>
                                                                 <option value="0">10 Minutes</option>
-                                                                <option value="0">15 Minutes</option> 
+                                                                <option value="0">15 Minutes</option>
                                                                 <option value="0">30 Minutes</option>
                                                                 <option value="0">1 Hours</option>
                                                                 <option value="0">2 Hours</option>
@@ -374,12 +478,12 @@
                                                                 <option value="0">10 Hours</option>
                                                                 <option value="0">11 Hours</option>
                                                                 <option value="0">0.5 days </option>
-                                                                <option value="0">1 day</option> 
-                                                                <option value="0">2 day</option> 
-                                                                <option value="0">3 day</option> 
-                                                                <option value="0">4 day</option> 
-                                                                <option value="0">1 week</option> 
-                                                                <option value="0">2 weeks</option>  
+                                                                <option value="0">1 day</option>
+                                                                <option value="0">2 day</option>
+                                                                <option value="0">3 day</option>
+                                                                <option value="0">4 day</option>
+                                                                <option value="0">1 week</option>
+                                                                <option value="0">2 weeks</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -411,8 +515,39 @@
                                                                 <button class="Pattern_btn4 pattern_btn"
                                                                     onclick="openPattern('pattern4')" type="button">
                                                                     <span class="radio"><b></b></span>
+                                                                    <span class="pattern-text">Bi Weekly</span>
+                                                                </button>
+                                                                <button class="Pattern_btn5 pattern_btn"
+                                                                    onclick="openPattern('pattern5')" type="button">
+                                                                    <span class="radio"><b></b></span>
+                                                                    <span class="pattern-text">Semi Monthly</span>
+                                                                </button>
+                                                                <button class="Pattern_btn6 pattern_btn"
+                                                                    onclick="openPattern('pattern6')" type="button">
+                                                                    <span class="radio"><b></b></span>
+                                                                    <span class="pattern-text">Bi-monthly</span>
+                                                                </button>
+                                                                <button class="Pattern_btn7 pattern_btn"
+                                                                    onclick="openPattern('pattern7')" type="button">
+                                                                    <span class="radio"><b></b></span>
+                                                                    <span class="pattern-text">Quarterly</span>
+                                                                </button>
+                                                                <button class="Pattern_btn8 pattern_btn"
+                                                                    onclick="openPattern('pattern8')" type="button">
+                                                                    <span class="radio"><b></b></span>
+                                                                    <span class="pattern-text">Half yearly</span>
+                                                                </button>
+                                                                <button class="Pattern_btn9 pattern_btn"
+                                                                    onclick="openPattern('pattern9')" type="button">
+                                                                    <span class="radio"><b></b></span>
                                                                     <span class="pattern-text">Yearly</span>
                                                                 </button>
+                                                                <button class="Pattern_btn10 pattern_btn"
+                                                                    onclick="openPattern('pattern10')" type="button">
+                                                                    <span class="radio"><b></b></span>
+                                                                    <span class="pattern-text">One time</span>
+                                                                </button>
+
                                                             </div>
                                                             <div class="pattern-right">
                                                                 <div class="pattern-cotent1 pattern-cmn01"
@@ -565,8 +700,466 @@
                                                                     <form action="#" class="Daily_form1">
                                                                         <div class="every-wrp">
                                                                             <div class="Ptrn-item1 Ptrn-item-cmn">
+                                                                                <!-- <label for="#">Bi Weekly</label> -->
+                                                                                <div class="Bi_Weekly-wrapper">
+                                                                                    <ul class="Bi-weekly-Left">
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <!-- <input type="radio" name="bi-weekly" id="bi-weekly2">
+                                                                                             <label for="">Every 2 Weeks </label> -->
+                                                                                            <label for="">Every </label>
+                                                                                            <select name="bi-weekly"
+                                                                                                id="Every_Month1">
+                                                                                                <option value="0">1
+                                                                                                </option>
+                                                                                                <option value="0">2
+                                                                                                </option>
+                                                                                                <option value="0">3
+                                                                                                </option>
+                                                                                                <option value="0">4
+                                                                                                </option>
+                                                                                                <option value="0">5
+                                                                                                </option>
+                                                                                                <option value="0">6
+                                                                                                </option>
+                                                                                                <option value="0">7
+                                                                                                </option>
+                                                                                                <!-- <option value="0">8</option>
+                                                                                                 <option value="0">9</option>
+                                                                                                 <option value="0">10</option>
+                                                                                                 <option value="0">11</option>
+                                                                                                 <option value="0">12</option> -->
+                                                                                            </select>
+                                                                                            <label for=""> Weeks</label>
+                                                                                        </li>
+                                                                                        <!-- <li class="Bi-wekly1">
+                                                                                            <input type="radio" name="bi-weekly" id="bi-weekly3">
+                                                                                            <label for="">Every 3 Weeks </label>
+                                                                                        </li>
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <input type="radio" name="bi-weekly" id="bi-weekly4">
+                                                                                            <label for="">Every 4 Weeks </label>
+                                                                                        </li>
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <input type="radio" name="bi-weekly" id="bi-weekly5">
+                                                                                            <label for="">Every 5 Weeks </label>
+                                                                                        </li>
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <input type="radio" name="bi-weekly" id="bi-weekly6">
+                                                                                            <label for="">Every 6 Weeks </label>
+                                                                                        </li> -->
+                                                                                    </ul>
+                                                                                    <ul class="Bi-weekly-Right">
+                                                                                        <label for="">On Day :</label>
+                                                                                        <select name="bi-weekly" id="">
+                                                                                            <option value="0">Select Day
+                                                                                            </option>
+                                                                                            <option value="1">Sunday
+                                                                                            </option>
+                                                                                            <option value="0">Monday
+                                                                                            </option>
+                                                                                            <option value="1">Tuesday
+                                                                                            </option>
+                                                                                            <option value="0">Wednesday
+                                                                                            </option>
+                                                                                            <option value="1">Thursday
+                                                                                            </option>
+                                                                                            <option value="0">Friday
+                                                                                            </option>
+                                                                                            <option value="1">Saturday
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="pattern-cotent5 pattern-cmn01" id="pattern5"
+                                                                    style="display: none;">
+                                                                    <form action="#" class="Daily_form1">
+                                                                        <div class="every-wrp">
+                                                                            <div class="Ptrn-item1 Ptrn-item-cmn">
+                                                                                <!-- <label for="#">Semi Monthly</label>  -->
+                                                                                <div class="Bi_Weekly-wrapper">
+                                                                                    <ul class="Bi-weekly-Left">
+                                                                                        <li class="Bi-wekly1">
+                                                                                           <label for="">Day1</label>
+                                                                                             <select name="bi-weekly" id="Every_Month1">
+                                                                                                <option value="0">Date</option>
+                                                                                                <option value="1">1</option>
+                                                                                                <option value="0">2</option>
+                                                                                                <option value="1">3</option>
+                                                                                                <option value="0">4</option>
+                                                                                                <option value="1">5</option>
+                                                                                                <option value="0">6</option>
+                                                                                                <option value="0">7</option>
+                                                                                                <option value="1">8</option>
+                                                                                                <option value="1">9</option>
+                                                                                                <option value="0">10
+                                                                                                </option>
+                                                                                                <option value="0">11
+                                                                                                </option>
+                                                                                                <option value="1">12
+                                                                                                </option>
+                                                                                                <option value="1">13
+                                                                                                </option>
+                                                                                                <option value="0">14
+                                                                                                </option>
+                                                                                                <option value="0">15
+                                                                                                </option>
+                                                                                                <option value="1">16
+                                                                                                </option>
+                                                                                                <option value="1">17
+                                                                                                </option>
+                                                                                                <option value="0">18
+                                                                                                </option>
+                                                                                                <option value="0">21
+                                                                                                </option>
+                                                                                                <option value="1">22
+                                                                                                </option>
+                                                                                                <option value="1">23
+                                                                                                </option>
+                                                                                                <option value="0">24
+                                                                                                </option>
+                                                                                                <option value="0">25
+                                                                                                </option>
+                                                                                                <option value="1">26
+                                                                                                </option>
+                                                                                                <option value="1">27
+                                                                                                </option>
+                                                                                                <option value="0">28
+                                                                                                </option>
+                                                                                                <option value="0">29
+                                                                                                </option>
+                                                                                                <option value="1">30
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <ul class="Bi-weekly-Right">
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <label for="">Day2</label>
+                                                                                            <select name="bi-weekly" id="">
+                                                                                                <option value="0">Date</option>
+                                                                                                <option value="1">1</option>
+                                                                                                <option value="0">2</option>
+                                                                                                <option value="1">3</option>
+                                                                                                <option value="0">4</option>
+                                                                                                <option value="1">5</option>
+                                                                                                <option value="0">6</option>
+                                                                                                <option value="0">7</option>
+                                                                                                <option value="1">8</option>
+                                                                                                <option value="1">9</option>
+                                                                                                <option value="0">10
+                                                                                                </option>
+                                                                                                <option value="0">11
+                                                                                                </option>
+                                                                                                <option value="1">12
+                                                                                                </option>
+                                                                                                <option value="1">13
+                                                                                                </option>
+                                                                                                <option value="0">14
+                                                                                                </option>
+                                                                                                <option value="0">15
+                                                                                                </option>
+                                                                                                <option value="1">16
+                                                                                                </option>
+                                                                                                <option value="1">17
+                                                                                                </option>
+                                                                                                <option value="0">18
+                                                                                                </option>
+                                                                                                <option value="0">21
+                                                                                                </option>
+                                                                                                <option value="1">22
+                                                                                                </option>
+                                                                                                <option value="1">23
+                                                                                                </option>
+                                                                                                <option value="0">24
+                                                                                                </option>
+                                                                                                <option value="0">25
+                                                                                                </option>
+                                                                                                <option value="1">26
+                                                                                                </option>
+                                                                                                <option value="1">27
+                                                                                                </option>
+                                                                                                <option value="0">28
+                                                                                                </option>
+                                                                                                <option value="0">29
+                                                                                                </option>
+                                                                                                <option value="1">30
+                                                                                                </option>
+                                                                                                <option value="1">31
+                                                                                                </option>
+                                                                                            </select>
+                                                                                       </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="pattern-cotent6 pattern-cmn01" id="pattern6"
+                                                                    style="display: none;">
+                                                                    <form action="#" class="Daily_form1">
+                                                                        <div class="every-wrp">
+                                                                            <div class="Ptrn-item1 Ptrn-item-cmn">
+                                                                                <!-- <label for="#">Bi-monthly </label> -->
+                                                                                <div class="Bi_Weekly-wrapper">
+                                                                                    <ul class="Bi-weekly-Left">
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <!-- <input type="radio" name="bi-weekly" id="bi-weekly2">
+                                                                                            <label for="">Every 2 Months </label> -->
+                                                                                            <label for="">Every </label>
+                                                                                            <select name="bi-weekly"
+                                                                                                id="Every_Month1">
+                                                                                                <option value="0">1
+                                                                                                </option>
+                                                                                                <option value="0">2
+                                                                                                </option>
+                                                                                                <option value="0">3
+                                                                                                </option>
+                                                                                                <option value="0">4
+                                                                                                </option>
+                                                                                                <option value="0">5
+                                                                                                </option>
+                                                                                                <option value="0">6
+                                                                                                </option>
+                                                                                                <option value="0">7
+                                                                                                </option>
+                                                                                                <option value="0">8
+                                                                                                </option>
+                                                                                                <option value="0">9
+                                                                                                </option>
+                                                                                                <option value="0">10
+                                                                                                </option>
+                                                                                                <option value="0">11
+                                                                                                </option>
+                                                                                                <option value="0">12
+                                                                                                </option>
+                                                                                            </select>
+                                                                                            <label for="">  Months</label>
+                                                                                        </li>
+                                                                                        <!-- <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly3">
+                                                                                           <label for="">Every 3 Months </label>
+                                                                                       </li>
+                                                                                       <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly4">
+                                                                                           <label for="">Every 4 Months </label>
+                                                                                       </li>
+                                                                                       <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly5">
+                                                                                           <label for="">Every 5 Months </label>
+                                                                                       </li>
+                                                                                       <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly6">
+                                                                                           <label for="">Every 6 Months </label>
+                                                                                       </li> -->
+                                                                                    </ul>
+                                                                                    <ul class="Bi-weekly-Right">
+                                                                                        <li class="Bi-wekly1">
+                                                                                        <label for="">On  Date </label>
+                                                                                        <!-- <input type="date" name="weekdate" id="weekdate"> -->
+                                                                                        <select name="bi-weekly" id="">
+                                                                                            <option value="0">Select Date</option>
+                                                                                            <option value="1">1</option>
+                                                                                            <option value="0">2</option>
+                                                                                            <option value="1">3</option>
+                                                                                            <option value="0">4</option>
+                                                                                            <option value="1">5</option>
+                                                                                            <option value="0">6</option>
+                                                                                            <option value="0">7</option>
+                                                                                            <option value="1">8</option>
+                                                                                            <option value="1">9</option>
+                                                                                            <option value="0">10
+                                                                                            </option>
+                                                                                            <option value="0">11
+                                                                                            </option>
+                                                                                            <option value="1">12
+                                                                                            </option>
+                                                                                            <option value="1">13
+                                                                                            </option>
+                                                                                            <option value="0">14
+                                                                                            </option>
+                                                                                            <option value="0">15
+                                                                                            </option>
+                                                                                            <option value="1">16
+                                                                                            </option>
+                                                                                            <option value="1">17
+                                                                                            </option>
+                                                                                            <option value="0">18
+                                                                                            </option>
+                                                                                            <option value="0">21
+                                                                                            </option>
+                                                                                            <option value="1">22
+                                                                                            </option>
+                                                                                            <option value="1">23
+                                                                                            </option>
+                                                                                            <option value="0">24
+                                                                                            </option>
+                                                                                            <option value="0">25
+                                                                                            </option>
+                                                                                            <option value="1">26
+                                                                                            </option>
+                                                                                            <option value="1">27
+                                                                                            </option>
+                                                                                            <option value="0">28
+                                                                                            </option>
+                                                                                            <option value="0">29
+                                                                                            </option>
+                                                                                            <option value="1">30
+                                                                                            </option>
+                                                                                          </select>
+                                                                                      </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="pattern-cotent7 pattern-cmn01" id="pattern7"
+                                                                    style="display: none;">
+                                                                    <form action="#" class="Daily_form1">
+                                                                        <div class="every-wrp">
+                                                                            <div class="Ptrn-item1 Ptrn-item-cmn">
+                                                                                <!-- <label for="#">Quarterly </label> -->
+                                                                                <div class="Bi_Weekly-wrapper">
+                                                                                    <ul class="Bi-weekly-Left">
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <!-- <input type="radio" name="bi-weekly" id="bi-weekly2">
+                                                                                            <label for="">Every 2 Months</label>  -->
+                                                                                            <label for="">Every </label>
+                                                                                            <select name="bi-weekly"
+                                                                                                id="Every_Month1">
+                                                                                                <option value="0">1
+                                                                                                </option>
+                                                                                                <option value="0">2
+                                                                                                </option>
+                                                                                                <option value="0">3
+                                                                                                </option>
+                                                                                                <option value="0">4
+                                                                                                </option>
+                                                                                                <option value="0">5
+                                                                                                </option>
+                                                                                                <option value="0">6
+                                                                                                </option>
+                                                                                                <option value="0">7
+                                                                                                </option>
+                                                                                                <option value="0">8
+                                                                                                </option>
+                                                                                                <option value="0">9
+                                                                                                </option>
+                                                                                                <option value="0">10
+                                                                                                </option>
+                                                                                                <option value="0">11
+                                                                                                </option>
+                                                                                                <option value="0">12
+                                                                                                </option>
+                                                                                            </select>
+                                                                                            <label for="">
+                                                                                                Months</label>
+                                                                                        </li>
+                                                                                        <!-- <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly3">
+                                                                                           <label for="">Every 3 Months </label>
+                                                                                       </li>
+                                                                                       <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly4">
+                                                                                           <label for="">Every 4 Months </label>
+                                                                                       </li>
+                                                                                       <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly5">
+                                                                                           <label for="">Every 5 Months </label>
+                                                                                       </li>
+                                                                                       <li class="Bi-wekly1">
+                                                                                           <input type="radio" name="bi-weekly" id="bi-weekly6">
+                                                                                           <label for="">Every 6 Months </label>
+                                                                                       </li> -->
+                                                                                    </ul>
+                                                                                    <ul class="Bi-weekly-Right">
+                                                                                        <label for="">On Date :</label>
+                                                                                        <!-- <input type="date" name="weekdate" id="weekdate"> -->
+                                                                                        <select name="bi-weekly" id="">
+                                                                                            <option value="0">Select Date</option>
+                                                                                            <option value="1">1</option>
+                                                                                            <option value="0">2</option>
+                                                                                            <option value="1">3</option>
+                                                                                            <option value="0">4</option>
+                                                                                            <option value="1">5</option>
+                                                                                            <option value="0">6</option>
+                                                                                            <option value="0">7</option>
+                                                                                            <option value="1">8</option>
+                                                                                            <option value="1">9</option>
+                                                                                            <option value="0">10
+                                                                                            </option>
+                                                                                            <option value="0">11
+                                                                                            </option>
+                                                                                            <option value="1">12
+                                                                                            </option>
+                                                                                            <option value="1">13
+                                                                                            </option>
+                                                                                            <option value="0">14
+                                                                                            </option>
+                                                                                            <option value="0">15
+                                                                                            </option>
+                                                                                            <option value="1">16
+                                                                                            </option>
+                                                                                            <option value="1">17
+                                                                                            </option>
+                                                                                            <option value="0">18
+                                                                                            </option>
+                                                                                            <option value="0">21
+                                                                                            </option>
+                                                                                            <option value="1">22
+                                                                                            </option>
+                                                                                            <option value="1">23
+                                                                                            </option>
+                                                                                            <option value="0">24
+                                                                                            </option>
+                                                                                            <option value="0">25
+                                                                                            </option>
+                                                                                            <option value="1">26
+                                                                                            </option>
+                                                                                            <option value="1">27
+                                                                                            </option>
+                                                                                            <option value="0">28
+                                                                                            </option>
+                                                                                            <option value="0">29
+                                                                                            </option>
+                                                                                            <option value="1">30
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="pattern-cotent8 pattern-cmn01" id="pattern8"
+                                                                    style="display: none;">
+                                                                    <form action="#" class="Daily_form1">
+                                                                        <div class="every-wrp">
+                                                                            <div class="Ptrn-item1 Ptrn-item-cmn">
+                                                                                <!-- <label for="#">Half yearly </label> -->
+                                                                                <div class="Bi_Weekly-wrapper">
+                                                                                    <ul class="Bi-weekly-Left">
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <label for="">Starting from :</label>
+                                                                                            <input type="date" name="half-year" id="weekdate">
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="pattern-cotent9 pattern-cmn01" id="pattern9"
+                                                                    style="display: none;">
+                                                                    <form action="#" class="Daily_form1">
+                                                                        <div class="every-wrp">
+                                                                            <div class="Ptrn-item1 Ptrn-item-cmn">
                                                                                 <!-- <input type="radio" name="checkbox1"
-                                                                                    id="checkbox1"> -->
+                                                                                id="checkbox1"> -->
                                                                                 <label for="#">Recur every</label>
                                                                             </div>
                                                                             <div class="Ptrn-item2 Ptrn-item-cmn">
@@ -682,6 +1275,24 @@
                                                                         </div>
                                                                     </form>
                                                                 </div>
+                                                                <div class="pattern-cotent10 pattern-cmn01"
+                                                                    id="pattern10" style="display: none;">
+                                                                    <form action="#" class="Daily_form1">
+                                                                        <div class="every-wrp">
+                                                                            <div class="Ptrn-item1 Ptrn-item-cmn">
+                                                                                <!-- <label for="#">On Time </label> -->
+                                                                                <div class="Bi_Weekly-wrapper">
+                                                                                    <ul class="Bi-weekly-Left">
+                                                                                        <li class="Bi-wekly1">
+                                                                                            <label for="">On Time :</label>
+                                                                                            <input type="date" name="half-year" id="weekdate">
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -712,8 +1323,8 @@
                                                                             <label for="0">End by:</label>
                                                                         </div>
                                                                         <div class="date-field">
-                                                                            <input type="date"
-                                                                                name="date" id="datelocal" value="04-08-2021">
+                                                                            <input type="date" name="date"
+                                                                                id="datelocal" value="04-08-2021">
                                                                         </div>
                                                                     </div>
                                                                     <div class="range-item2 range-item-cmn">
@@ -773,20 +1384,11 @@
         crossorigin="anonymous"></script>
     <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"> -->
     </script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
     <script src="/assets/js//jquery.min.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/yearpicker.js"></script>
-    <!-- <script type="text/javascript">
-        $(document).ready(function () {
-            $(".yearpicker").yearpicker({
-                year: 2021,
-                startYear: 2019,
-                endYear: 2050,
-            });
-        });
-    </script> -->
+
 </body>
 
 </html>

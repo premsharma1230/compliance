@@ -1,0 +1,53 @@
+
+ @media only screen and (max-width: 1440px){
+     main{
+        .Company-masterWrapper{
+            width: 78%;
+            margin: 1rem 1rem 0 auto;
+        }
+        .Company-masterWrapper .Company-content .heading-wrp h2{
+            font-size: .95em;
+        }
+         #AddCompliance-Content .child-form .item-cmn {
+            width: 32%;
+        }
+         #AddCompliance-Content .child-form .item-cmn {
+            width: 23%;
+        }
+        #AddCompliance-Content .child-form .modal-item8.item-cmn {
+            width: 72% !important;
+        }
+         #Attachment_MasterWrapper {
+            width: 50% !important;
+            margin: 1rem auto 0 21%;
+        }
+     } 
+     .MyActivity-Wrapper .Company-masterWrapper {
+        margin: 1rem 1rem 0 auto;
+    }
+    .MyActivity-Wrapper .Attachment_MasterWrapper .Table_wrapper table{
+        width: 144% !important;
+    }
+    .Success-Modal_Wrapper{
+        top: 33%;
+    }
+    main #Make-Recurring .recurring_form .pattern-wrp .pattern-left .active-btn .radio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main #Make-Recurring .recurring_form .pattern-wrp .pattern-left .active-btn .radio b{
+        // transform: translate(.3px, .3px); 
+        width: 10px;
+        height: 10px;  
+        border: .1px solid #fff;
+        margin: auto;
+    }
+ }
+ 
+ @media only screen and (min-width: 1200px){
+    .modal-xl {
+        max-width: 50%!important;//45%;
+    }
+ }
+ 

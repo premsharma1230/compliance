@@ -11,92 +11,184 @@
     <link rel="stylesheet" href="assets/scss/style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 </head>
 
 <body>
     <main>
-       <header>
-           <div class="container">
-               <nav>
-                  <!-- <h2>Welcome Home page</h2> -->
-                  <!-- <a href="login.html">Login page</a> -->
-                  <div class="profile-wrapper">
-                       <div class="SubProfile">
-                        <span class="profile1"><i class="far fa-user-circle"></i></span>
-                        <h3>Super.Admin</h3>
-                        <span class="arrow-down"><i class="fas fa-chevron-down"></i></span>
-                       </div>
-                  </div>
-               </nav>
-               <div class="credential-Wrapper">
-                   <ul class="unorder">
-                       <li>
-                           <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
-                           <a href="#">Logout</a>
+        <header>
+            <div class="container">
+                <nav>
+                    <!-- <h2>Welcome Home page</h2> -->
+                    <!-- <a href="login.html">Login page</a> -->
+                    <div class="profile-wrapper">
+                        <div class="SubProfile">
+                            <span class="profile1"><i class="far fa-user-circle"></i></span>
+                            <h3>Super.Admin</h3>
+                            <span class="arrow-down"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                </nav>
+                <div class="credential-Wrapper">
+                    <ul class="unorder">
+                        <li>
+                            <span class="Logout_icon"><i class="fas fa-power-off"></i></span>
+                            <a href="login.html">Logout</a>
                         </li>
-                   </ul>
-               </div>
-           </div>
-        <!-- menu-bar -->
-           <div class="main-bar">
-            <div class="a"></div>
-            <div class="b"></div>
-            <div class="c"></div>
-        <!-- menu-bar -->
+                    </ul>
+                </div>
+            </div>
+            <!-- menu-bar -->
+            <div class="main-bar">
+                <div class="a"></div>
+                <div class="b"></div>
+                <div class="c"></div>
+                <!-- menu-bar -->
+            </div>
+        </header>
+
+
+        <!-- Sidebar-section -->
+        <section class="Sidebar_Wrapper">
+            <div class="Side-child_Wrp">
+                <ul class="Sidbar-Nav-Wrapper">
+                    <li class="Side_item Logo">
+                        <a href="companymaster.html">
+                            company master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="activitymaster.html">
+                            activity master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="subactivity.html">
+                            SubActivity master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="sectionmaster.html">
+                            Section master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliancetypemaster.html">
+                            compliance type master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="compliance.html">
+                            compliance master
+                        </a>
+                    </li>
+                    <li class="Side_item">
+                        <a href="myactivity.html">
+                            My Activity
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- sidber----end--here -->
+        <!--  -->
+        <div class="Company-masterWrapper Dashboard_Wrapper">
+            <div class="Chart_Wrapper">
+                <div class="chart-item1 chat-cmn">
+                    <canvas id="Adminchart" width="400" height="200"></canvas>
+                </div>
+                <div class="chart-item2 chat-cmn">
+                    <canvas id="Admin-month" width="400" height="200"></canvas>
+                </div>
+            </div>
         </div>
-       </header>
-
-
-   <!-- Sidebar-section -->
-   <section class="Sidebar_Wrapper">
-    <div class="Side-child_Wrp">
-        <ul class="Sidbar-Nav-Wrapper">
-            <li class="Side_item Logo">
-                <a href="companymaster.html">
-                    company master
-                </a>
-            </li>
-            <li class="Side_item">
-                <a href="compliance.html">
-                    Compliance master
-                </a>
-            </li>
-            <li class="Side_item">
-                <a href="compliancetypemaster.html">
-                    compliance type master
-                </a>
-            </li>
-            <li class="Side_item">
-                <a href="activitymaster.html">
-                    activity master
-                </a>
-            </li>
-            <li class="Side_item">
-                <a href="subactivity.html">
-                    SubActivity master
-                </a>
-            </li>
-            <li class="Side_item">
-                <a href="sectionmaster.html">
-                    Section master
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
-<!-- sidber----end--here -->
-           <!--  -->
-              
-           <!--  -->
+        <!--  -->
 
     </main>
 
 
     <!-- script---section -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<script src="/assets/js//jquery.min.js"></script>  
-<script src="/assets/js/main.js"></script> 
-</body> 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="/assets/js//jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
+    <script>
+        var xValues = ["Admin1", "Admin2", "Admin3", "Admin4", "Admin5"];
+        var yValues = [55, 49, 44, 24, 15];
+        var barColors = [
+            "#1c85dd",
+            "#f3cd00",
+            "#e31d60",
+            "#00df72",
+            "#f65421"
+        ];
+
+        new Chart("Adminchart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Admin Activity of 2021"
+                }
+            }
+        });
+// ---------------------------NEw---
+
+var ctx = document.getElementById('Admin-month').getContext('2d');
+var chart = new Chart(ctx, {
+	// The type of chart we want to create
+	type: 'line', // also try bar or other graph types
+
+	// The data for our dataset
+	data: {
+		labels: ["Jan", "Feb", "Mar", "apri", "May", 'Jun', 'July', 'Aug', "Sep", "Oct", "Nov", "Dec"],
+		// Information about the dataset
+    datasets: [{
+			label: "Chart bar",
+			backgroundColor: 'lightblue',
+			borderColor: 'royalblue',
+			data: [26.4, 39.8, 66.8, 66.4, 40.6, 55.2, 77.4, 69.8, 57.8, 76, 110.8, 142.6],
+		}]
+	},
+
+	// Configuration options
+	options: {
+    layout: {
+      padding: 10,
+    },
+		legend: {
+			position: 'bottom',
+		},
+		title: {
+			display: true,
+			text: 'Admin Data Of this Year'
+		},
+		scales: {
+			yAxes: [{
+				scaleLabel: {
+					display: true,
+					labelString: 'Admin chart of 2021'
+				}
+			}],
+			xAxes: [{
+				scaleLabel: {
+					display: true,
+					labelString: 'Month of the Year'
+				}
+			}]
+		}
+	}
+});
+    </script>
+</body>
+
 </html>
